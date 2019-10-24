@@ -1,3 +1,5 @@
+#Ignore Rstudio project files
+*.Rproj
 .Rproj.user
 .Rhistory
 .RData
