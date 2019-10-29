@@ -7,9 +7,24 @@ source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
 
+fluidPage(
+  
+  dashboardPage(
+    dashboardHeader("Obesity in 2018"),
+    dashboardSidebar(),
+    dashboardBody(
+      tabItems(
+        tabItem(tabname = "obesityIncome.r")
+      )
+    )
+  )
+)
+
+
+
 
 #Make header page
-  #on headed page need heat map of % of adults 15+ with obesity
+  #on headed page need heat map of % of adults 18+ with obesity
   #add desciption of why this is relevant
 
 #2nd tab
