@@ -1,6 +1,12 @@
 library(shiny)
 View(obesityData)
 
+#source each tab into the general ui.r
+
+source("obesityHeatMap.r")
+source("obesityEducation.r")
+source("obesityIncome.r")
+
 
 #Make header page
   #on headed page need heat map of % of adults 15+ with obesity
