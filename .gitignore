@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+#Ignore Rstudio project files
+*.Rproj
+.Rproj.user
+=======
 .Rproj.user
 *.Rproj
 
+>>>>>>> 21597f1da387613207eca273fb3085944ae669c9
 .Rhistory
 .RData
 .Ruserdata
