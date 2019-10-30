@@ -11,5 +11,10 @@ obesityEducationData <- obesityData                                             
          Question                == 
                     "Percent of adults aged 18 years and older who have obesity")
 
-colnames(obesityEducationData) <- tolower(colnames(obesityEducationData))
+colnames(obesityEducationData) [1] <- "year"
+colnames(obesityEducationData) [2] <- "location"
+colnames(obesityEducationData) [3] <- "question"
+colnames(obesityEducationData) [4] <- "percent"
+colnames(obesityEducationData) [5] <- "sampleSize"
+colnames(obesityEducationData) [6] <- "educationLevel"
 
