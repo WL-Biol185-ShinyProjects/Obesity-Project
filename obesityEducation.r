@@ -18,3 +18,9 @@ colnames(obesityEducationData) [4] <- "percent"
 colnames(obesityEducationData) [5] <- "sampleSize"
 colnames(obesityEducationData) [6] <- "educationLevel"
 
+#calculations
+obesityEducationData <- obesityEducationData %>%
+  as_tibble()                                %>% 
+  mutate(
+  numberObese = sampleSize*(percent/100))
+
