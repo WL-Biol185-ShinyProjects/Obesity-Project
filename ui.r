@@ -1,15 +1,12 @@
 library(shiny)
 View(obesityData)
 
+#source each tab into the general ui.r
 
+source("obesityHeatMap.r")
+source("obesityEducation.r")
+source("obesityIncome.r")
 
-
-
-
-
-
-
-<<<<<<< HEAD
 fluidPage(
   
   dashboardPage(
@@ -22,14 +19,9 @@ fluidPage(
     )
   )
 )
-=======
-#source each tab into the general ui.r
 
-source("obesityHeatMap.r")
-source("obesityEducation.r")
-source("obesityIncome.r")
 
->>>>>>> 1f8ce96d73fcc57c9b7e73c6fb72fefd92be18b1
+
 
 #Make header page
   #on headed page need heat map of % of adults 18+ with obesity
