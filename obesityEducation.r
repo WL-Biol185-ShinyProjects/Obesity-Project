@@ -24,4 +24,8 @@ obesityEducationData <- obesityEducation     %>%
   mutate(
   numberObese = sampleSize*(percent/100))
 
+obesityEducationData$location <- as.factor(obesityEducationData$location)
+obesityEducationData$year <- as.factor(obesityEducationData$year)
+obesityEducationData$educationLevel <- as.factor(obesityEducationData$educationLevel)
+
 View(obesityEducationData)
