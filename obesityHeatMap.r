@@ -21,3 +21,7 @@ colnames (obesityHeat) [5]  <- "sampleSize"
 
 obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column 
   filter(percent != "N/A")
+
+obesityHeatPercent$state <- as.factor(obesityHeatPercent$state)
+
+summary(obesityHeatPercent)
