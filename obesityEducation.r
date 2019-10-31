@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+tabItem(
+  title = "",
+  titlePanel(""),
+  
+  sidebarLayout(
+    sidebarPanel(
+      checkboxInput(
+        inputId = "",
+        label = "",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "",
+        label = "",
+        value = TRUE
+      ),    
+      checkboxInput(
+        inputId = "",
+        label = "",
+        value = TRUE
+      ),     
+      checkboxInput(
+        inputId = "",
+        label = "",
+        value = TRUE
+      ),     
+      checkboxInput(
+        inputId = "",
+        label = "",
+        value = TRUE
+      )),
+      sliderInput("",
+                  "",
+                  min = ,
+                  max = ,
+                  value = c())
+    ),
+    
+    
+    mainPanel(
+      plotOutput("distPlotCarat")
+)
+)
+=======
 #data manipulation for education
 View(obesityData)
 library(tidyverse)
@@ -24,3 +69,4 @@ obesityEducationData <- obesityEducationData %>%
   mutate(
   numberObese = sampleSize*(percent/100))
 
+>>>>>>> 7f50bc10d06cb8b99d8d44627b467d2e3c5354fa

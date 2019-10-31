@@ -1,9 +1,13 @@
 #data manipulation for income
+
+obesityIncome2018 <- select(obesityGeneral2018)
+
 View(obesityData)
 library(tidyverse)
 library(dplyr)
 
 obesityIncome2018 <- obesityGeneral2018 %>% select(YearStart, LocationAbbr, Question, Data_Value, Sample_Size, Income)
+
 
 #removing all data that have NA as value for Income
 
