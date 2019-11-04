@@ -15,7 +15,7 @@ obesityHeat <- obesityGeneralYear %>%
 #renamed columns
 colnames (obesityHeat) [1]  <- "year"
 colnames (obesityHeat) [2]  <- "state"
-colnames (obesityHeat) [3]  <-  "question" 
+colnames (obesityHeat) [3]  <- "question" 
 colnames (obesityHeat) [4]  <- "percent" 
 colnames (obesityHeat) [5]  <- "sampleSize"
 
