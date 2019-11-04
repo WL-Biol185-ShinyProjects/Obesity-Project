@@ -1,3 +1,5 @@
+obesityHeatTab <- tabItem 
+
 View(obesityData)
 library(tidyverse)
 library(dplyr)
@@ -26,6 +28,7 @@ obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a fa
 obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
 
 summary(obesityHeatPercent)
+
 
 
 

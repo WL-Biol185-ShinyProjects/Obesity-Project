@@ -1,5 +1,6 @@
 library(shiny)
 View(obesityData)
+library(shinydashboard)
 
 #source each tab into the general ui.r
 
@@ -10,16 +11,16 @@ source("obesityIncome.r")
 fluidPage(
   
   dashboardPage(
-    dashboardHeader("Obesity in 2018"),
+    dashboardHeader(title="Obesity in 2018"),
     dashboardSidebar(),
     dashboardBody(
       tabItems(
-        tabItem(tabname = "obesityIncome.r")
+        tabItem(tabName = "obesityIncome.r", "obesityEducation.r", "obesityIncome.r"
       )
     )
   )
 )
-
+)
 
 
 
