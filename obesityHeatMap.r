@@ -1,3 +1,5 @@
+obesityHeatTab <- tabItem 
+
 View(obesityData)
 library(tidyverse)
 library(dplyr)
@@ -15,13 +17,18 @@ obesityHeat <- obesityGeneralYear %>%
 #renamed columns
 colnames (obesityHeat) [1]  <- "year"
 colnames (obesityHeat) [2]  <- "state"
-colnames (obesityHeat) [3]  <-  "question" 
+colnames (obesityHeat) [3]  <- "question" 
 colnames (obesityHeat) [4]  <- "percent" 
 colnames (obesityHeat) [5]  <- "sampleSize"
 
 obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column 
   filter(percent != "N/A")
 
-obesityHeatPercent$state <- as.factor(obesityHeatPercent$state)
+obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
+obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
 
 summary(obesityHeatPercent)
+
+
+
+
