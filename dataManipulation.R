@@ -28,16 +28,16 @@ obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
 
 #create bar graph of increase in obesity 
 
-ggplot(obeseTotal, aes(year, percentObese)) + geom_col() + theme(axis.text.x = element_text(angle = 0, hjust = 1))
-
-ggplot(obesityGeneralYearsPercent, aes(year, percent, color= state)) + geom_point()
-
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%
   summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
 
 View(obeseTotal)
 
+obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
+
+
+ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
 
 
 
@@ -47,4 +47,4 @@ View(obesityGeneralYearsPercent)
 #interactive plots, plotOutput
 #brush = brushOpts( id  = "you create this"
 
-                  )
+                  
