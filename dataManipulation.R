@@ -28,5 +28,4 @@ obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
 
 #create bar graph of increase in obesity 
 
-ggplot(obesityGeneralYearsPercent, aes(year, percent, fill=state)) + geom_col() + theme(axis.text.x = element_text(angle = 0, hjust = 1))
 
