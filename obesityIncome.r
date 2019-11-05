@@ -26,7 +26,11 @@ colnames(obesityIncome) [5] <- "sampleSize"
 colnames(obesityIncome) [6] <- "incomeLevel"
 
 #calculations
+<<<<<<< HEAD
+obesityIncomeData <- obesityIncomeData       %>%
+=======
 obesityIncome <- obesityIncomeData %>%
+>>>>>>> 425c1b41acd8d4e521e08c4a29a0a2bf15ec1db3
   as_tibble()                                %>% 
   mutate(
     numberObese = sampleSize*(percent/100))

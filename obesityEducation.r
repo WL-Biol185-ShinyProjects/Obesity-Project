@@ -26,4 +26,18 @@ obesityEducationData <- obesityEducation     %>%
   mutate(
   numberObese = sampleSize*(percent/100))
 
-View(obesityEducationData)
+obesityEducationData$location <- as.factor(obesityEducationData$location)
+obesityEducationData$year <- as.factor(obesityEducationData$year)
+obesityEducationData$educationLevel <- as.factor(obesityEducationData$educationLevel)
+
+
+obesityEducationTotals <- obesityEducationData                       %>%
+  group_by(location)                                                 %>%
+  summarise(obesePercent = (sum(numberObese)/sum(sampleSize))*100)
+
+View(obesityEducationTotals)
+
+
+#boxplot
+
+ggplot(obesityEducationData, aes(educationLevel, percent, fill= location)) + geom_boxplot()
