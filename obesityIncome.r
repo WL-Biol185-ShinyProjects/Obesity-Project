@@ -31,8 +31,11 @@ obesityIncomeData <- obesityIncomeData       %>%
   group_by(state, year) %>%
   summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
-#turning states into factors
+#convertin variables into factors
 
-obesityIncomeData$state <- as.factor(obesityIncomeData$state)
+obesityIncomeData$location <- as.factor(obesityIncomeData$location)
+obesityIncomeData$year <- as.factor(obesityIncomeData$year)
+obesityIncomeData$educationLevel <- as.factor(obesityIncomeData$incomeLevel)
+
 
 summary(obesityIncomeData)
