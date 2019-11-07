@@ -1,4 +1,4 @@
-obesityIncomeTab <- tabItem 
+
 
 #data manipulation for income
 
@@ -27,15 +27,16 @@ colnames(obesityIncome) [6] <- "incomeLevel"
 
 #calculations
 
-obesityIncomeData <- obesityIncomeData       %>%
-  group_by(state, year) %>%
-  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
+obesityIncomeTotals <- obesityIncomeData                       %>%
+  as_tibble()                                                  %>% 
+  mutate(
+    obesePercent = (numberObese/sampleSize)*100)
 
-#convertin variables into factors
+#converting variables into factors
 
 obesityIncomeData$location <- as.factor(obesityIncomeData$location)
 obesityIncomeData$year <- as.factor(obesityIncomeData$year)
 obesityIncomeData$educationLevel <- as.factor(obesityIncomeData$incomeLevel)
 
 
-summary(obesityIncomeData)
+
