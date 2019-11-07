@@ -1,4 +1,7 @@
-ObesityEducation <- 
+ObesityEducation <- list(
+  
+  mainPanel
+)
 
 #data manipulation for education
 View(obesityData)

@@ -21,13 +21,17 @@ source("obesityIncome.r")
     ),
     dashboardBody(
       tabItems(
-        tabItem(tabName = "obesityHeat"),
-        tabItem(tabName = "obesityEducation"),
-        tabItem(tabName = "obesityIncome")
+        tabItem(tabName = "obesityHeat",
+                obesityHeat),
+        tabItem(tabName = "obesityEducation",
+                obesityEducation),
+        tabItem(tabName = "obesityIncome",
+                obesityIncome)
+      )
       )
     )
-  )
-
+    
+  
 
 
 
