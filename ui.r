@@ -13,7 +13,7 @@ source("obesityIncome.r")
     dashboardSidebar(
       sidebarMenu(
         menuItem("Overview", tabName = "overViewTab"),
-        menuItem("Cool contet", tabName = "contentTab")
+        menuItem("Cool content", tabName = "contentTab")
       )
     ),
     dashboardBody(
