@@ -1,6 +1,7 @@
 library(shiny)
 View(obesityData)
 library(shinydashboard)
+library(leaflet)
 
 #source each tab into the general ui.r
 
@@ -19,13 +20,17 @@ source("obesityIncome.r")
     ),
     dashboardBody(
       tabItems(
-        tabItem(tabName = "obesityHeat"),
-        tabItem(tabName = "obesityEducation"),
-        tabItem(tabName = "obesityIncome")
+        tabItem(tabName = "obesityHeat",
+                obesityHeat),
+        tabItem(tabName = "obesityEducation",
+                obesityEducation),
+        tabItem(tabName = "obesityIncome",
+                obesityIncome)
+      )
       )
     )
-  )
-
+    
+  
 
 
 

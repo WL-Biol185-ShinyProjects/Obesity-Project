@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+ObesityEducation <- list(
+  
+  mainPanel
+)
+>>>>>>> 1d8d5555f50ebadf4f97b30f61b47ef9270fbcc7
 
 #data manipulation for education
 View(obesityData)

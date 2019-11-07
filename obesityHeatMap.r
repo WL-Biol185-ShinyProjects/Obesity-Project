@@ -9,6 +9,7 @@ View(obesityData)
 library(tidyverse)
 library(dplyr)
 
+
 #filtering for specific question
 obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
