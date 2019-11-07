@@ -8,19 +8,22 @@ source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
 
-fluidPage(
-  
   dashboardPage(
     dashboardHeader(title="Obesity in 2018"),
-    dashboardSidebar(),
+    dashboardSidebar(
+      sidebarMenu(
+        menuItem("Overview", tabName = "overViewTab"),
+        menuItem("Cool contet", tabName = "contentTab")
+      )
+    ),
     dashboardBody(
       tabItems(
-        tabItem(tabName = "obesityIncome.r", "obesityEducation.r", "obesityIncome.r"
+        tabItem(
       )
     )
   )
 )
-)
+
 
 
 
