@@ -1,6 +1,7 @@
 library(shiny)
 View(obesityData)
 library(shinydashboard)
+library(leaflet)
 
 #source each tab into the general ui.r
 #trying to make this work :)
