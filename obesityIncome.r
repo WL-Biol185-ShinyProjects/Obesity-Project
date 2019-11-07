@@ -1,8 +1,3 @@
-obesityIncome <- list(
-  
-  titlePanel("Obesity and Income in the United States"),
-  fluidRow(plotOutput("myIncomeGraph"))
-)
 
 #data manipulation for income
 
@@ -42,16 +37,49 @@ obesityIncomeData$location <- as.factor(obesityIncomeData$location)
 obesityIncomeData$year <- as.factor(obesityIncomeData$year)
 obesityIncomeData$educationLevel <- as.factor(obesityIncomeData$incomeLevel)
 
+#ui stuff
 
-#server stuff
+obesityIncome <- list(
   
-output$barPlotEdu <- renderPlot({
-  incomes <- c("$15,000-$24,999",
-               "$25,000-$34,999",
-               "$35,000-$49,999",
-               "$50,000-$74,999",
-               "$75,000 or greater"
-               )
-  selectedIncome 
+  titlePanel("Income & Obesity in the United States"),
   
-  
+  sidebarLayout(
+    sidebarPanel(
+      checkboxInput(
+        inputId = "$15,000-$24,999",
+        label = "$15,000-$24,999",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "$25,000-$34,999",
+        label = "$25,000-$34,999",
+        value = TRUE
+      ),    
+      checkboxInput(
+        inputId = "$35,000-$49,999",
+        label = "$35,000-$49,999",
+        value = TRUE
+      ),     
+      checkboxInput(
+        inputId = "$50,000-$74,999",
+        label = "$50,000-$74,999",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "$75,000 or greater",
+        label = "$75,000 or greater",
+        value = TRUE
+      ),
+      
+      selectizeInput(
+        inputId = "includeLocation",
+        label = "States",
+        choices = unique(obesityIncomeTotals$location),
+        multiple = TRUE,
+        selected = unique(obesityIncomeTotals$VA)
+      ),
+      
+      fluidRow(plotOutput("myIncomeGraph"))
+    )
+  )
+)  
