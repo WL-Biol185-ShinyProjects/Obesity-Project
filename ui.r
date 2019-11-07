@@ -13,9 +13,9 @@ source("obesityIncome.r")
     dashboardHeader(title="Obesity in 2018"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Obesity in America", tabName = "obesityHeat"),
+        menuItem("Obesity in America"   , tabName = "obesityHeat"),
         menuItem("Obesity and Education", tabName = "obesityEducation"),
-        menuItem("Obesity and Income", tabName = "obesityIncome")
+        menuItem("Obesity and Income"   , tabName = "obesityIncome")
       )
     ),
     dashboardBody(

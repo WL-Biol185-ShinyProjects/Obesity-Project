@@ -1,4 +1,4 @@
-ObesityEducationTab <- tabItem 
+ObesityEducation <- 
 
 #data manipulation for education
 View(obesityData)

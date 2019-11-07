@@ -1,4 +1,9 @@
-obesityHeat <- ""
+obesityHeat <- list(
+  
+  titlePanel("Obesity in the United States"),
+  fluidRow(leafletOutput("myHeatMap")),
+  fluidRow(plotOutput("myLinePlot"))
+)
 
 View(obesityData)
 library(tidyverse)
