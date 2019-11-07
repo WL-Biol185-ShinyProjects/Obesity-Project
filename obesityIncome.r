@@ -1,4 +1,4 @@
-obesityIncomeTab <- tabItem 
+obesityIncome <- 
 
 #data manipulation for income
 

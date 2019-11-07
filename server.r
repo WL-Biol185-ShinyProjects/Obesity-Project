@@ -10,10 +10,10 @@ source("obesityIncome.r")
 
 function(input, output, session) {
   
-  obesityHeatOutput     <- obesityHeatMap.r
-  obesityEductionOutput <- obesityEducation.r
-  obesityIncomeOutput   <- obesityIncome.r
+  output$myHeatMap <- renderPlot({
+    ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
+  })
   
-  
+ 
     
 }
