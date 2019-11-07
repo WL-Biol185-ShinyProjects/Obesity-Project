@@ -1,4 +1,8 @@
-
+obesityIncome <- list(
+  
+  titlePanel("Obesity and Income in the United States"),
+  fluidRow(plotOutput("myIncomeGraph"))
+)
 
 #data manipulation for income
 
@@ -39,4 +43,15 @@ obesityIncomeData$year <- as.factor(obesityIncomeData$year)
 obesityIncomeData$educationLevel <- as.factor(obesityIncomeData$incomeLevel)
 
 
-
+#server stuff
+  
+output$barPlotEdu <- renderPlot({
+  incomes <- c("$15,000-$24,999",
+               "$25,000-$34,999",
+               "$35,000-$49,999",
+               "$50,000-$74,999",
+               "$75,000 or greater"
+               )
+  selectedIncome 
+  
+  

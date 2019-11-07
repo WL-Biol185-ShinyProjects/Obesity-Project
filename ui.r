@@ -3,7 +3,6 @@ View(obesityData)
 library(shinydashboard)
 
 #source each tab into the general ui.r
-#trying to make this work :)
 
 source("obesityHeatMap.r")
 source("obesityEducation.r")
