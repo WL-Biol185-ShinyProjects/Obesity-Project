@@ -3,24 +3,31 @@ View(obesityData)
 library(shinydashboard)
 
 #source each tab into the general ui.r
+#trying to make this work :)
 
 source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
 
-fluidPage(
-  
   dashboardPage(
     dashboardHeader(title="Obesity in 2018"),
-    dashboardSidebar(),
+    dashboardSidebar(
+      sidebarMenu(
+        menuItem("Obesity in America", tabName = "obesityHeat"),
+        menuItem("Obesity and Education", tabName = "obesityEducation"),
+        menuItem("Obesity and Income", tabName = "obesityIncome")
+      )
+    ),
     dashboardBody(
       tabItems(
-        tabItem(tabName = "obesityIncome.r", "obesityEducation.r", "obesityIncome.r"
+        tabItem(tabName = "obesityHeat"),
+        tabItem(tabName = "obesityEducation"),
+        tabItem(tabName = "obesityIncome")
       )
     )
   )
-)
-)
+
+
 
 
 
