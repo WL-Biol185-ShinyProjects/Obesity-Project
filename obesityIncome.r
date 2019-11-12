@@ -6,7 +6,6 @@ obesityIncomeTab <- list(
 
 obesityIncome2018 <- select(obesityGeneral2018)
 
-View(obesityData)
 library(tidyverse)
 library(dplyr)
 
@@ -28,7 +27,7 @@ colnames(obesityIncome) [5] <- "sampleSize"
 colnames(obesityIncome) [6] <- "incomeLevel"
 
 #calculations
-<<<<<<< HEAD
+
 obesityIncomeData <- obesityIncome     %>%
   as_tibble()                          %>% 
   mutate(

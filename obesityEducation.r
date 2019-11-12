@@ -1,9 +1,9 @@
 obesityEducationTab <- list(
             
             titlePanel("Education & Obesity"),
-                sidebarPanel(
-                checkboxGroupInput(
-                "educationInput", "Choose Education Level:",
+                 sidebarPanel(
+                 checkboxGroupInput(
+                 "educationInput", "Choose Education Level:",
                   choices = list(
                   "College Graduate"     = "College graduate",
                   "Highschool Graduate"  = "High school graduate",
@@ -34,7 +34,6 @@ obesityEducationTab <- list(
 
 
 #data manipulation for education
-View(obesityData)
 library(tidyverse)
 library(dplyr)
 
@@ -69,7 +68,7 @@ obesityEducationTotals <- obesityEducationData                       %>%
   mutate(
   obesePercent = (numberObese/sampleSize)*100)
 
-View(obesityEducationTotals)
+
 
 
 

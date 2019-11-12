@@ -25,11 +25,11 @@ fluidPage(
     #creating tabs in the app
     dashboardBody(
       
-      tabItems(
+         tabItems(
         
-      #  tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
+        tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
         tabItem(tabName = "obesityEducationTab", obesityEducationTab)
-      #  tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
+      # tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
       )
       )
       )
