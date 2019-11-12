@@ -2,10 +2,9 @@ obesityHeat <- list(
   
   titlePanel("Obesity in the United States"),
   fluidRow(leafletOutput("myHeatMap")),
-  fluidRow(plotOutput("myLinePlot"))
-)
+  fluidRow(plotOutput("myLineGraph")))
 
-View(obesityData)
+#View(obesityData)
 library(tidyverse)
 library(dplyr)
 
@@ -33,7 +32,9 @@ obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column
 obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
 obesityHeatPercent$year <-  as.factor(obesityHeatPercent$year)
 
-summary(obesityHeatPercent)
+#summary(obesityHeatPercent)
+
+
 
 
 

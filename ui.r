@@ -1,21 +1,25 @@
 library(shiny)
 library(shinydashboard)
 library(leaflet)
+library(ggplot2)
 
 #source each tab into the general ui.r
 
-source("obesityHeatMap.r"  )
-source("obesityEducation.r")
-source("obesityIncome.r"   )
+#source("obesityHeatMap.r"  )
+#source("obesityEducation.r")
+#source("obesityIncome.r"   )
+
+myHeatMap <- ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
+myHeatMap
 
 fluidPage(
   dashboardPage(
-    dashboardHeader(title="Obesity in 2018"),
+    dashboardHeader(title="Obesity in America"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Obesity in America"   , tabName = "obesityHeat"     ),
-        menuItem("Obesity and Education", tabName = "obesityEducation"),
-        menuItem("Obesity and Income"   , tabName = "obesityIncome"   )
+        menuItem("Obesity in America"           , tabName = "obesityHeat"     ),
+        menuItem("Obesity and Education in 2018", tabName = "obesityEducation"),
+        menuItem("Obesity and Income in 2018"   , tabName = "obesityIncome"   )
       )
       ),
     
@@ -27,15 +31,22 @@ fluidPage(
       tabItems(
         
         tabItem(tabName = "obesityHeat",
-                obesityHeat),
+                                             
+                fluidRow(
+                  box(width = 12, background = "black", p("The plot below shows an overview of obesity in the United States from 2009-2018")
+                      ),
+                  
+                  fluidRow(plotOutput("myHeatMap"))
+                  
+                )),
         tabItem(tabName = "obesityEducation",
-                obesityEducation),
+                                             obesityEducation),
         tabItem(tabName = "obesityIncome",
-                obesityIncome)
+                                             obesityIncome)
       )
       )
       )
-)
+      )
   
 
 
