@@ -1,9 +1,4 @@
 
-ObesityEducation <- list(
-  
-  mainPanel
-)
-
 #data manipulation for education
 View(obesityData)
 library(tidyverse)
@@ -75,11 +70,9 @@ output$barPlotEdu <- renderPlot({
 
 library(shiny)
 
-fluidPage(
+obesityEducation <- list(
   
-  
-  title = "Obesity & Education",
-  titlePanel("Education & Obesity"),
+  titlePanel("Education & Obesity in the United States"),
   
   sidebarLayout(
     sidebarPanel(
@@ -106,8 +99,7 @@ fluidPage(
     
     
     mainPanel(
-      plotOutput("barPlotEdu")
-    )
+      plotOutput("barPlotEdu"))
   )
  )
 )

@@ -10,7 +10,7 @@ source("obesityEducation.r")
 source("obesityIncome.r")
 
   dashboardPage(
-    dashboardHeader(title="Obesity in 2018"),
+    dashboardHeader(title = "Obesity in 2018"),
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America"   , tabName = "obesityHeat"),
@@ -29,12 +29,8 @@ source("obesityIncome.r")
       )
       )
     )
-    
+
   
-
-
-
-
 #Make header page
   #on headed page need heat map of % of adults 18+ with obesity
   #add desciption of why this is relevant

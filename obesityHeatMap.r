@@ -1,9 +1,3 @@
-obesityHeat <- list(
-  
-  titlePanel("Obesity in the United States"),
-  fluidRow(leafletOutput("myHeatMap")),
-  fluidRow(plotOutput("myLinePlot"))
-)
 
 View(obesityData)
 library(tidyverse)
@@ -36,5 +30,13 @@ obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
 summary(obesityHeatPercent)
 
 
+obesityHeat <- list(
+  
+  titlePanel("Obesity in the United States"),
+  mainPanel(
+    fluidRow(leafletOutput("myHeatMap")),
+    fluidRow(plotOutput("myLinePlot"))
+  )
+)
 
 
