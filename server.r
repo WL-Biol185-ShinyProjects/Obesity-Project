@@ -43,8 +43,8 @@ function(input, output, session) {
                      "$75,000 or greater"
                      )
     
-    obesityIncomeTotals                       %>%
-      filter( incomeLevel == input$incomeLevel ) %>%
+    obesityIncomeTotals                            %>%
+      filter( incomeLevel == input$incomeLevel )   %>%
       filter (location %in% input$includeLocation) %>%
       ggplot(aes_string("incomeLevel", "obesePercent", fill = "location")) + 
       geom_boxplot()                                                       + 

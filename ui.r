@@ -4,9 +4,9 @@ library(leaflet)
 
 #source each tab into the general ui.r
 
-#source("obesityHeatMap.r"  )
-#source("obesityEducation.r")
-#source("obesityIncome.r"   )
+source("obesityHeatMap.r"  )
+source("obesityEducation.r")
+source("obesityIncome.r"   )
 
 fluidPage(
   dashboardPage(

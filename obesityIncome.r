@@ -65,13 +65,21 @@ obesityIncomeTotals$educationLevel <- as.factor(obesityIncomeTotals$incomeLevel)
 #ui stuff
 
 obesityIncome <- list(
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
   titlePanel("Income & Obesity in the United States"),
   
   sidebarLayout(
     sidebarPanel(
       checkboxInput(
+<<<<<<< HEAD
         inputId = "$15,000-$24,999",
+=======
+       inputId = "$15,000-$24,999",
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
         label = "$15,000-$24,999",
         value = TRUE
       ),
@@ -87,7 +95,11 @@ obesityIncome <- list(
       ),     
       checkboxInput(
         inputId = "$50,000-$74,999",
+<<<<<<< HEAD
         label = "$50,000-$74,999",
+=======
+       label = "$50,000-$74,999",
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
         value = TRUE
       ),
       checkboxInput(
@@ -96,7 +108,11 @@ obesityIncome <- list(
         value = TRUE
       ),
       
+<<<<<<< HEAD
        selectizeInput(
+=======
+      selectizeInput(
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
         inputId = "includeLocation",
         label = "States",
         choices = unique(obesityIncomeTotals$location),
@@ -104,6 +120,7 @@ obesityIncome <- list(
         selected = unique(obesityIncomeTotals$VA)
       ),
       
+<<<<<<< HEAD
 
       mainPanel(
         plotOutput("myIncomeGraph"))
@@ -113,3 +130,18 @@ obesityIncome <- list(
       fluidRow(plotOutput("myIncomeGraph"))
   
 )
+=======
+      mainPanel(
+        plotOutput("myIncomeGraph")
+      
+    
+    )
+  )
+)
+)
+
+
+
+
+
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
