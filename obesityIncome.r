@@ -1,10 +1,8 @@
-obesityIncome <- 
 
 #data manipulation for income
 
 obesityIncome2018 <- select(obesityGeneral2018)
 
-View(obesityData)
 library(tidyverse)
 library(dplyr)
 
@@ -26,16 +24,74 @@ colnames(obesityIncome) [5] <- "sampleSize"
 colnames(obesityIncome) [6] <- "incomeLevel"
 
 #calculations
+obesityIncomeData <- obesityIncome     %>%
+  as_tibble()                          %>% 
+  mutate(
+    numberObese = sampleSize*(percent/100))
 
-obesityIncomeData <- obesityIncomeData       %>%
-  group_by(state, year) %>%
-  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
+obesityIncomeTotals <- obesityIncomeData                   %>%
+  as_tibble()                                              %>% 
+  mutate(
+    obesePercent = (numberObese/sampleSize)*100)
 
-#convertin variables into factors
+#converting variables into factors
 
-obesityIncomeData$location <- as.factor(obesityIncomeData$location)
-obesityIncomeData$year <- as.factor(obesityIncomeData$year)
-obesityIncomeData$educationLevel <- as.factor(obesityIncomeData$incomeLevel)
+obesityIncomeTotals$location       <- as.factor(obesityIncomeTotals$location)
+obesityIncomeTotals$year           <- as.factor(obesityIncomeTotals$year)
+obesityIncomeTotals$educationLevel <- as.factor(obesityIncomeTotals$incomeLevel)
+
+#ui stuff
+
+obesityIncome <- list(
+  
+  titlePanel("Income & Obesity in the United States"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      checkboxInput(
+       inputId = "$15,000-$24,999",
+        label = "$15,000-$24,999",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "$25,000-$34,999",
+        label = "$25,000-$34,999",
+        value = TRUE
+      ),    
+      checkboxInput(
+        inputId = "$35,000-$49,999",
+        label = "$35,000-$49,999",
+        value = TRUE
+      ),     
+      checkboxInput(
+        inputId = "$50,000-$74,999",
+       label = "$50,000-$74,999",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "$75,000 or greater",
+        label = "$75,000 or greater",
+        value = TRUE
+      ),
+      
+      selectizeInput(
+        inputId = "includeLocation",
+        label = "States",
+        choices = unique(obesityIncomeTotals$location),
+        multiple = TRUE,
+        selected = unique(obesityIncomeTotals$VA)
+      ),
+      
+      mainPanel(
+        plotOutput("myIncomeGraph")
+      
+    
+    )
+  )
+)
+)
 
 
-summary(obesityIncomeData)
+
+
+
