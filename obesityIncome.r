@@ -1,8 +1,10 @@
+obesityIncome <- 
 
 #data manipulation for income
 
 obesityIncome2018 <- select(obesityGeneral2018)
 
+View(obesityData)
 library(tidyverse)
 library(dplyr)
 
@@ -24,6 +26,7 @@ colnames(obesityIncome) [5] <- "sampleSize"
 colnames(obesityIncome) [6] <- "incomeLevel"
 
 #calculations
+<<<<<<< HEAD
 obesityIncomeData <- obesityIncome     %>%
   as_tibble()                          %>% 
   mutate(
@@ -90,8 +93,18 @@ obesityIncomeTotals$educationLevel <- as.factor(obesityIncomeTotals$incomeLevel)
 #  )
 #)
 #)
+=======
+>>>>>>> d599afe96b52b8c9a90a0d10f442ec35d6f760d7
+
+obesityIncomeData <- obesityIncomeData       %>%
+  group_by(state, year) %>%
+  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
+
+#convertin variables into factors
+
+obesityIncomeData$location <- as.factor(obesityIncomeData$location)
+obesityIncomeData$year <- as.factor(obesityIncomeData$year)
+obesityIncomeData$educationLevel <- as.factor(obesityIncomeData$incomeLevel)
 
 
-
-
-
+summary(obesityIncomeData)

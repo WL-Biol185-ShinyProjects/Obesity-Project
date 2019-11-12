@@ -8,7 +8,6 @@ obesityHeat <- list(
 library(tidyverse)
 library(dplyr)
 
-
 #filtering for specific question
 obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
@@ -30,7 +29,7 @@ obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column
   filter(percent != "N/A")
 
 obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
-obesityHeatPercent$year <-  as.factor(obesityHeatPercent$year)
+obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
 
 #summary(obesityHeatPercent)
 

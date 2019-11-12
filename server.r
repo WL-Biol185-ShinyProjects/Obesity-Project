@@ -16,8 +16,9 @@ function(input, output, session) {
     
   })
   
-  output$barPlotEdu <- renderPlot({
+ 
     
+<<<<<<< HEAD
     eduLevel <- c("College Graduate"                 ,
                   "High School Graduate"             ,
                   "Less Than High School"            ,
@@ -59,3 +60,6 @@ function(input, output, session) {
   
 
 }
+=======
+}
+>>>>>>> d599afe96b52b8c9a90a0d10f442ec35d6f760d7
