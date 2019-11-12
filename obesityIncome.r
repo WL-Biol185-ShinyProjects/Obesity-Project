@@ -1,4 +1,6 @@
-obesityIncome <- 
+obesityIncomeTab <- list(
+  
+)
 
 #data manipulation for income
 

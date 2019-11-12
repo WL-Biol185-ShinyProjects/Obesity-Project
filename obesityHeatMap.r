@@ -1,4 +1,4 @@
-obesityHeat <- list(
+obesityHeatTab <- list(
   
   titlePanel("Obesity in the United States"),
   fluidRow(box(width = 12, background = "black", p("This is a map of the United States detailing obesity in 2018"))),

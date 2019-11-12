@@ -5,21 +5,18 @@ library(ggplot2)
 
 #source each tab into the general ui.r
 
-#source("obesityHeatMap.r"  )
-#source("obesityEducation.r")
-#source("obesityIncome.r"   )
-
-myHeatMap <- ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
-myHeatMap
+source("obesityHeatMap.r"  )
+source("obesityEducation.r")
+#source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
     dashboardHeader(title="Obesity in America"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Obesity in America"           , tabName = "obesityHeat"     ),
-        menuItem("Obesity and Education in 2018", tabName = "obesityEducation"),
-        menuItem("Obesity and Income in 2018"   , tabName = "obesityIncome"   )
+        menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
+        menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
+        menuItem("Obesity and Income in 2018"   , tabName = "obesityIncomeTab"   )
       )
       ),
     
@@ -30,12 +27,9 @@ fluidPage(
       
       tabItems(
         
-        tabItem(tabName = "obesityHeat",
-                                             obesityHeat),
-        tabItem(tabName = "obesityEducation",
-                                             obesityEducation),
-        tabItem(tabName = "obesityIncome",
-                                             obesityIncome)
+      #  tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
+        tabItem(tabName = "obesityEducationTab", obesityEducationTab)
+      #  tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
       )
       )
       )

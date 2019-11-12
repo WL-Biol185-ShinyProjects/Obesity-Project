@@ -6,7 +6,7 @@ library(tidyverse)
 
 source("obesityHeatMap.r")
 source("obesityEducation.r")
-source("obesityIncome.r")
+#source("obesityIncome.r")
 
 function(input, output, session) {
   
@@ -17,26 +17,33 @@ function(input, output, session) {
   })
   
  
+  output$stateResult <- renderText({
     
-<<<<<<< HEAD
-    eduLevel <- c("College Graduate"                 ,
-                  "High School Graduate"             ,
-                  "Less Than High School"            ,
-                  "Some College or Technical School"
-                  
-    )
+    paste(input$location, collapse = ", ")
     
-    selectedEducation <- eduLevel[c(input$col, input$hs, input$lessHs, input$someCol)]
+  })
+  
+  output$checkEdu <- renderText({
+    
+    educationInput <- paste(input$educationInput, collapse = ", ")
+    paste(educationInput)
+    
+  })
+  
+  output$barPlotEdu <- renderPlot({
+    
     
     obesityEducationTotals                 %>%
       filter(
-        eduLevel %in% selectedEducation
-      )                                   %>%
-      ggplot(aes("location", "obesePercent", fill = "educationLevel")) +
+        educationLevel %in% input$educationInput,
+        location       %in% input$location)                                    %>%
+      ggplot(aes(location, obesePercent, fill = educationLevel)) +
       geom_col(position = "dodge", alpha = 0.5)                  +
       xlab("State")                                              +
       ylab("% Obese")
+    
   })
+ 
   
   
   output$obesityIncome <- renderPlot({
@@ -60,6 +67,4 @@ function(input, output, session) {
   
 
 }
-=======
-}
->>>>>>> d599afe96b52b8c9a90a0d10f442ec35d6f760d7
+
