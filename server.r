@@ -11,16 +11,28 @@ source("obesityIncome.r")
 function(input, output, session) {
   
   output$myHeatMap <- renderPlot({
-    ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
+    
+    ggplot(obeseTotal, aes(input$yearNum, percentObese, color=input$state)) + geom_line()
+    
   })
   
   output$barPlotEdu <- renderPlot({
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 09dd7fd06d2a968ccafff9692ee588baa60f0a11
     eduLevel <- c("College Graduate"                 ,
                   "High School Graduate"             ,
                   "Less Than High School"            ,
                   "Some College or Technical School"
+<<<<<<< HEAD
     )
+=======
+                  
+    )
+    
+>>>>>>> 09dd7fd06d2a968ccafff9692ee588baa60f0a11
     selectedEducation <- eduLevel[c(input$col, input$hs, input$lessHs, input$someCol)]
     
     obesityEducationTotals                 %>%
@@ -54,3 +66,10 @@ function(input, output, session) {
   })
   
 
+<<<<<<< HEAD
+=======
+}
+=======
+}
+>>>>>>> d599afe96b52b8c9a90a0d10f442ec35d6f760d7
+>>>>>>> 09dd7fd06d2a968ccafff9692ee588baa60f0a11
