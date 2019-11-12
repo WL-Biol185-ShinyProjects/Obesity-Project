@@ -1,4 +1,12 @@
+
 View(obesityData)
+
+
+#data manipulation for income
+
+obesityIncome2018 <- select(obesityGeneral2018)
+
+
 library(tidyverse)
 library(dplyr)
 library(shiny)
@@ -23,6 +31,11 @@ colnames(obesityIncome) [5] <- "sampleSize"
 colnames(obesityIncome) [6] <- "incomeLevel"
 
 #calculations
+obesityIncomeData <- obesityIncome     %>%
+  as_tibble()                          %>% 
+  mutate(
+    numberObese = sampleSize*(percent/100))
+
 
 obesityIncomeData <- obesityIncome           %>%
   as_tibble()                                %>% 
@@ -31,6 +44,7 @@ obesityIncomeData <- obesityIncome           %>%
 
 
 #converting variables into factors
+
 
 obesityIncomeData$location <- as.factor(obesityIncomeData$location)
 obesityIncomeData$year <- as.factor(obesityIncomeData$year)
@@ -43,10 +57,15 @@ obesityIncomeTotals <- obesityIncomeData                       %>%
   mutate(
     obesePercent = (numberObese/sampleSize)*100)
 
+obesityIncomeTotals$location       <- as.factor(obesityIncomeTotals$location)
+obesityIncomeTotals$year           <- as.factor(obesityIncomeTotals$year)
+obesityIncomeTotals$educationLevel <- as.factor(obesityIncomeTotals$incomeLevel)
+
+
 #ui stuff
 
 obesityIncome <- list(
-  
+
   titlePanel("Income & Obesity in the United States"),
   
   sidebarLayout(
@@ -77,7 +96,7 @@ obesityIncome <- list(
         value = TRUE
       ),
       
-      selectizeInput(
+       selectizeInput(
         inputId = "includeLocation",
         label = "States",
         choices = unique(obesityIncomeTotals$location),
@@ -85,8 +104,12 @@ obesityIncome <- list(
         selected = unique(obesityIncomeTotals$VA)
       ),
       
+
       mainPanel(
         plotOutput("myIncomeGraph"))
     )
-  )
-)  
+  ),
+
+      fluidRow(plotOutput("myIncomeGraph"))
+  
+)

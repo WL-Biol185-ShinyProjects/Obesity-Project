@@ -3,11 +3,10 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 
-obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
+obesityGeneral     <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
 obesityGeneralYear <- filter(obesityGeneral, YearStart == c("2018", "2017"))
 
-View(obesityGeneral)
 
 #filter table for 5 columns that we want
 obesityGeneralYears <- obesityGeneral %>%
@@ -24,9 +23,9 @@ obesityGeneralYearsPercent <- obesityGeneralYears %>% #taking of N/A from percen
   filter(percent != "N/A")
 
 obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state) #made state a factor
-obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
+obesityGeneralYearsPercent$year  <- as.factor(obesityGeneralYearsPercent$year)
 
-#create bar graph of increase in obesity 
+#creates obesity Total column that will allow me to make the line graph
 
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%

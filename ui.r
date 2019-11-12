@@ -1,25 +1,31 @@
 library(shiny)
-View(obesityData)
 library(shinydashboard)
 library(leaflet)
 
 #source each tab into the general ui.r
 
-source("obesityHeatMap.r")
-source("obesityEducation.r")
-source("obesityIncome.r")
+#source("obesityHeatMap.r"  )
+#source("obesityEducation.r")
+#source("obesityIncome.r"   )
 
+fluidPage(
   dashboardPage(
     dashboardHeader(title = "Obesity in 2018"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Obesity in America"   , tabName = "obesityHeat"),
+        menuItem("Obesity in America"   , tabName = "obesityHeat"     ),
         menuItem("Obesity and Education", tabName = "obesityEducation"),
-        menuItem("Obesity and Income"   , tabName = "obesityIncome")
+        menuItem("Obesity and Income"   , tabName = "obesityIncome"   )
       )
-    ),
+      ),
+    
+    
+    
+    #creating tabs in the app
     dashboardBody(
+      
       tabItems(
+        
         tabItem(tabName = "obesityHeat",
                 obesityHeat),
         tabItem(tabName = "obesityEducation",
@@ -27,8 +33,10 @@ source("obesityIncome.r")
         tabItem(tabName = "obesityIncome",
                 obesityIncome)
       )
-      )
     )
+  )
+)
+  
 
   
 #Make header page
