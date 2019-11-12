@@ -1,4 +1,8 @@
-ObesityEducation <- 
+
+ObesityEducation <- list(
+  
+  mainPanel
+)
 
 #data manipulation for education
 View(obesityData)
@@ -40,6 +44,7 @@ View(obesityEducationTotals)
 
 
 #server stuff
+<<<<<<< HEAD
 function(input, output, session) {
   
   output$stateResult <- renderText({
@@ -70,14 +75,43 @@ function(input, output, session) {
   })
   
 }
+=======
+library(shiny)
+library(ggplot2)
+library(tidyverse)
+
+#function(input, output, session) {
+  
+#output$barPlotEdu <- renderPlot({
+  
+  # eduLevel <- c("College Graduate"                 ,
+     #           "High School Graduate"             ,
+    #            "Less Than High School"            ,
+   #             "Some College or Technical School"
+    #        )
+  #selectedEducation <- eduLevel[c(input$col, input$hs, input$lessHs, input$someCol)]
+
+  #obesityEducationTotals                 %>%
+  #  filter(
+   #   eduLevel %in% selectedEducation
+  #  )                                   %>%
+   # ggplot(aes(location, obesePercent, fill = educationLevel)) +
+  #  geom_col(position = "dodge", alpha = 0.5)                  +
+   # xlab("State")                                              +
+  #  ylab("% Obese")
+#})
+
+#}
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
 
 #ui stuff
 
 library(shiny)
 
-fluidPage(
+#fluidPage(
   
   
+<<<<<<< HEAD
   title = "Obesity & Education",
   
   titlePanel("Education & Obesity"),
@@ -111,4 +145,39 @@ fluidPage(
     )
   )
 )
+=======
+ # title = "Obesity & Education",
+  #titlePanel("Education & Obesity"),
+  
+#  sidebarLayout(
+#    sidebarPanel(
+ #     checkboxInput(
+#       inputId = "col",
+ #       label = "College Graduate",
+  #      value = TRUE
+  #    ),
+   #   checkboxInput(
+    #    inputId = "hs",
+     #   label = "High School Graduate",
+      #  value = TRUE
+      #),    
+      #checkboxInput(
+       # inputId = "lessHs",
+      #  label = "Less Than High School",
+       # value = TRUE
+    #  ),     
+     # checkboxInput(
+      #  inputId = "someCol",
+       # label = "Some College or Technical School",
+      #  value = TRUE
+    #  ),     
+    
+    
+ #   mainPanel(
+ #     plotOutput("barPlotEdu")
+ #   )
+#  )
+# )
+#)
+>>>>>>> 406ff5bb9633ef7cf7736b2dae1e90af97241912
 
