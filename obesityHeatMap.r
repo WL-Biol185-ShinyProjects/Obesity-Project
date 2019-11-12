@@ -2,7 +2,9 @@ obesityHeat <- list(
   
   titlePanel("Obesity in the United States"),
   fluidRow(leafletOutput("myHeatMap")),
-  fluidRow(plotOutput("myLineGraph")))
+  fluidRow(box(width = 12, background = "black", p("The plot below shows an overview of obesity in the United States from 2009-2018")
+  ),
+  fluidRow(plotOutput("myLineGraph"))))
 
 #View(obesityData)
 library(tidyverse)
