@@ -48,67 +48,67 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
-function(input, output, session) {
+#function(input, output, session) {
   
-output$barPlotEdu <- renderPlot({
+#output$barPlotEdu <- renderPlot({
   
-  eduLevel <- c("College Graduate"                 ,
-                "High School Graduate"             ,
-                "Less Than High School"            ,
-                "Some College or Technical School"
-            )
-  selectedEducation <- eduLevel[c(input$col, input$hs, input$lessHs, input$someCol)]
+  # eduLevel <- c("College Graduate"                 ,
+     #           "High School Graduate"             ,
+    #            "Less Than High School"            ,
+   #             "Some College or Technical School"
+    #        )
+  #selectedEducation <- eduLevel[c(input$col, input$hs, input$lessHs, input$someCol)]
 
-  obesityEducationTotals                 %>%
-    filter(
-      eduLevel %in% selectedEducation
-    )                                   %>%
-    ggplot(aes(location, obesePercent, fill = educationLevel)) +
-    geom_col(position = "dodge", alpha = 0.5)                  +
-    xlab("State")                                              +
-    ylab("% Obese")
-})
+  #obesityEducationTotals                 %>%
+  #  filter(
+   #   eduLevel %in% selectedEducation
+  #  )                                   %>%
+   # ggplot(aes(location, obesePercent, fill = educationLevel)) +
+  #  geom_col(position = "dodge", alpha = 0.5)                  +
+   # xlab("State")                                              +
+  #  ylab("% Obese")
+#})
 
-}
+#}
 
 #ui stuff
 
 library(shiny)
 
-fluidPage(
+#fluidPage(
   
   
-  title = "Obesity & Education",
-  titlePanel("Education & Obesity"),
+ # title = "Obesity & Education",
+  #titlePanel("Education & Obesity"),
   
-  sidebarLayout(
-    sidebarPanel(
-      checkboxInput(
-        inputId = "col",
-        label = "College Graduate",
-        value = TRUE
-      ),
-      checkboxInput(
-        inputId = "hs",
-        label = "High School Graduate",
-        value = TRUE
-      ),    
-      checkboxInput(
-        inputId = "lessHs",
-        label = "Less Than High School",
-        value = TRUE
-      ),     
-      checkboxInput(
-        inputId = "someCol",
-        label = "Some College or Technical School",
-        value = TRUE
-      ),     
+#  sidebarLayout(
+#    sidebarPanel(
+ #     checkboxInput(
+#       inputId = "col",
+ #       label = "College Graduate",
+  #      value = TRUE
+  #    ),
+   #   checkboxInput(
+    #    inputId = "hs",
+     #   label = "High School Graduate",
+      #  value = TRUE
+      #),    
+      #checkboxInput(
+       # inputId = "lessHs",
+      #  label = "Less Than High School",
+       # value = TRUE
+    #  ),     
+     # checkboxInput(
+      #  inputId = "someCol",
+       # label = "Some College or Technical School",
+      #  value = TRUE
+    #  ),     
     
     
-    mainPanel(
-      plotOutput("barPlotEdu")
-    )
-  )
- )
-)
+ #   mainPanel(
+ #     plotOutput("barPlotEdu")
+ #   )
+#  )
+# )
+#)
 

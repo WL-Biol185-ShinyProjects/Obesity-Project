@@ -31,7 +31,7 @@ obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column
   filter(percent != "N/A")
 
 obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
-obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
+obesityHeatPercent$year <-  as.factor(obesityHeatPercent$year)
 
 summary(obesityHeatPercent)
 
