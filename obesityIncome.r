@@ -42,47 +42,56 @@ obesityIncomeTotals$educationLevel <- as.factor(obesityIncomeTotals$incomeLevel)
 
 #ui stuff
 
-#obesityIncome <- list(
+obesityIncome <- list(
   
-#  titlePanel("Income & Obesity in the United States"),
+  titlePanel("Income & Obesity in the United States"),
   
-#  sidebarLayout(
- #   sidebarPanel(
- #     checkboxInput(
-  #      inputId = "$15,000-$24,999",
-  #      label = "$15,000-$24,999",
-  #      value = TRUE
-  #    ),
-  #    checkboxInput(
-  #      inputId = "$25,000-$34,999",
-  #      label = "$25,000-$34,999",
-  #      value = TRUE
-  #    ),    
-  #    checkboxInput(
-  #      inputId = "$35,000-$49,999",
-  #      label = "$35,000-$49,999",
-  #      value = TRUE
-  #    ),     
-  #    checkboxInput(
-  #      inputId = "$50,000-$74,999",
-  #      label = "$50,000-$74,999",
-  #      value = TRUE
-  #    ),
-  #    checkboxInput(
-  #      inputId = "$75,000 or greater",
-  #      label = "$75,000 or greater",
-  #      value = TRUE
-  #    ),
+  sidebarLayout(
+    sidebarPanel(
+      checkboxInput(
+       inputId = "$15,000-$24,999",
+        label = "$15,000-$24,999",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "$25,000-$34,999",
+        label = "$25,000-$34,999",
+        value = TRUE
+      ),    
+      checkboxInput(
+        inputId = "$35,000-$49,999",
+        label = "$35,000-$49,999",
+        value = TRUE
+      ),     
+      checkboxInput(
+        inputId = "$50,000-$74,999",
+       label = "$50,000-$74,999",
+        value = TRUE
+      ),
+      checkboxInput(
+        inputId = "$75,000 or greater",
+        label = "$75,000 or greater",
+        value = TRUE
+      ),
       
-   #   selectizeInput(
-   #     inputId = "includeLocation",
-   #     label = "States",
-   #     choices = unique(obesityIncomeTotals$location),
-  #      multiple = TRUE,
-   #     selected = unique(obesityIncomeTotals$VA)
-   #   ),
+      selectizeInput(
+        inputId = "includeLocation",
+        label = "States",
+        choices = unique(obesityIncomeTotals$location),
+        multiple = TRUE,
+        selected = unique(obesityIncomeTotals$VA)
+      ),
       
-   #   fluidRow(plotOutput("myIncomeGraph"))
- #   )
-#  )
-#)  
+      mainPanel(
+        plotOutput("myIncomeGraph")
+      
+    
+    )
+  )
+)
+)
+
+
+
+
+
