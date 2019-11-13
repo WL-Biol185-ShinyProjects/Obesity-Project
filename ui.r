@@ -1,21 +1,26 @@
 library(shiny)
 library(shinydashboard)
 library(leaflet)
+library(ggplot2)
 
 #source each tab into the general ui.r
 
 source("obesityHeatMap.r"  )
 source("obesityEducation.r")
-source("obesityIncome.r"   )
+#source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
+<<<<<<< HEAD
     dashboardHeader(title = "Obesity in 2018"),
+=======
+    dashboardHeader(title="Obesity in America"),
+>>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Obesity in America"   , tabName = "obesityHeat"     ),
-        menuItem("Obesity and Education", tabName = "obesityEducation"),
-        menuItem("Obesity and Income"   , tabName = "obesityIncome"   )
+        menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
+        menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
+        menuItem("Obesity and Income in 2018"   , tabName = "obesityIncomeTab"   )
       )
       ),
     
@@ -24,18 +29,21 @@ fluidPage(
     #creating tabs in the app
     dashboardBody(
       
-      tabItems(
+         tabItems(
         
-        tabItem(tabName = "obesityHeat",
-                obesityHeat),
-        tabItem(tabName = "obesityEducation",
-                obesityEducation),
-        tabItem(tabName = "obesityIncome",
-                obesityIncome)
+        tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
+        tabItem(tabName = "obesityEducationTab", obesityEducationTab)
+      # tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
       )
+      )
+<<<<<<< HEAD
     )
   )
 )
+=======
+      )
+      )
+>>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
   
 
   

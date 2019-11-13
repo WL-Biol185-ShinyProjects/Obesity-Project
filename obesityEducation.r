@@ -1,6 +1,42 @@
+obesityEducationTab <- list(
+            
+            titlePanel("Education & Obesity"),
+                 sidebarPanel(
+                 checkboxGroupInput(
+                 "educationInput", "Choose Education Level:",
+                  choices = list(
+                  "College Graduate"     = "College graduate",
+                  "Highschool Graduate"  = "High school graduate",
+                  "Less than Highschool" = "Less than high school",
+                  "Technical School"     = "Some college or technical school"
+                )
+                ),
+              textOutput("checkEdu"),
+              
+              selectInput(inputId = "location",
+                          label = "Choose States:",
+                          choices = list(
+                            "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
+                            "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
+                            "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
+                            "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
+                            "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
+                          ),
+                          selectize = TRUE,
+                          multiple = TRUE
+                          
+              ),
+              textOutput("stateResult"),
+              mainPanel(plotOutput("barPlotEdu")
+              )
+            )
+  )
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
 #data manipulation for education
-View(obesityData)
 library(tidyverse)
 library(dplyr)
 
@@ -35,41 +71,10 @@ obesityEducationTotals <- obesityEducationData                       %>%
   mutate(
   obesePercent = (numberObese/sampleSize)*100)
 
-View(obesityEducationTotals)
 
 
-#server stuff
-library(shiny)
-library(ggplot2)
-library(tidyverse)
 
-#function(input, output, session) {
-  
-#output$barPlotEdu <- renderPlot({
-  
-  # eduLevel <- c("College Graduate"                 ,
-     #           "High School Graduate"             ,
-    #            "Less Than High School"            ,
-   #             "Some College or Technical School"
-    #        )
-  #selectedEducation <- eduLevel[c(input$col, input$hs, input$lessHs, input$someCol)]
-
-  #obesityEducationTotals                 %>%
-  #  filter(
-   #   eduLevel %in% selectedEducation
-  #  )                                   %>%
-   # ggplot(aes(location, obesePercent, fill = educationLevel)) +
-  #  geom_col(position = "dodge", alpha = 0.5)                  +
-   # xlab("State")                                              +
-  #  ylab("% Obese")
-#})
-
-#}
-
-#ui stuff
-
-library(shiny)
-
+<<<<<<< HEAD
 
 obesityEducation <- list(
   
@@ -120,4 +125,6 @@ obesityEducation <- list(
 # )
 )
 
+=======
+>>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
 
