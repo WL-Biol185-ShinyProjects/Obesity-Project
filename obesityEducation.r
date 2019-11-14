@@ -1,6 +1,7 @@
 obesityEducationTab <- list(
-  
+   
   titlePanel("Education & Obesity"),
+   sidebarLayout(
     sidebarPanel(
     checkboxGroupInput(
       "educationInput", "Choose Education Level:",
@@ -23,10 +24,10 @@ obesityEducationTab <- list(
                   "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                 ),
                 selectize = TRUE,
-                multiple = TRUE
-                
+                multiple = TRUE          
     ),
-    textOutput("stateResult"),
+    textOutput("stateResult")
+    ),
     mainPanel(plotOutput("barPlotEdu")
     )
   )
