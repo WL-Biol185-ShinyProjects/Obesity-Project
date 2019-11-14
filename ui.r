@@ -7,11 +7,11 @@ library(ggplot2)
 
 source("obesityHeatMap.r"  )
 source("obesityEducation.r")
-source("obesityIncome.r"  )
+#source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
-    dashboardHeader(title="Obesity in America"),
+    dashboardHeader(title="Obesity in the United States"),
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
