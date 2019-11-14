@@ -94,8 +94,6 @@ obesityIncomeTotals$educationLevel <- as.factor(obesityIncomeTotals$incomeLevel)
 #  )
 #)
 #)
-=======
-  >>>>>>> d599afe96b52b8c9a90a0d10f442ec35d6f760d7
 
 obesityIncomeData <- obesityIncomeData       %>%
   group_by(state, year) %>%
