@@ -7,7 +7,7 @@ library(ggplot2)
 
 source("obesityHeatMap.r"  )
 source("obesityEducation.r")
-#source("obesityIncome.r"  )
+source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
