@@ -75,6 +75,17 @@ obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a fa
 obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
 
 
+obeseTotal <- obesityGeneralYearsPercent %>%
+  group_by(state, year) %>%
+  summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
+
+
+
+obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
+
+
+ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
+
 
 
 
