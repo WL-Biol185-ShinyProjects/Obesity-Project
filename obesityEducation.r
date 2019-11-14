@@ -29,8 +29,8 @@ obesityEducationTab <- list(
               textOutput("stateResult"),
               mainPanel(plotOutput("barPlotEdu")
               )
-            )
-  )
+              )
+              )
 
 
 #data manipulation for education

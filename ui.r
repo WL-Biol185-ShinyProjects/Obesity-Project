@@ -50,3 +50,5 @@ fluidPage(
 #3rd tab
   #Poverty level with same obesity heat map
   #bar graph x= income level (check box) and y=% obese, color by state (maybe drop down) 
+
+#geogyson look into this
