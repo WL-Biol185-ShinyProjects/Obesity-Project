@@ -10,9 +10,9 @@ obesityEducationTab <- list(
         "Highschool Graduate"  = "High school graduate",
         "Less than Highschool" = "Less than high school",
         "Technical School"     = "Some college or technical school"
-      )
+      ),
+      selected = c("College graduate", "High school graduate", "Less than high school")
     ),
-    textOutput("checkEdu"),
     
     selectInput(inputId = "location",
                 label = "Choose States:",
@@ -23,8 +23,9 @@ obesityEducationTab <- list(
                   "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
                   "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                 ),
+                selected = c("NY", "VA"),
                 selectize = TRUE,
-                multiple = TRUE          
+                multiple = TRUE
     ),
     textOutput("stateResult")
     ),
