@@ -11,7 +11,7 @@ source("obesityEducation.r")
 
 fluidPage(
   dashboardPage(
-    dashboardHeader(title="Obesity in America"),
+    dashboardHeader(title="Obesity in the United States"),
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
@@ -25,11 +25,12 @@ fluidPage(
     #creating tabs in the app
     dashboardBody(
       
-      tabItems(
+         tabItems(
         
         tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
         tabItem(tabName = "obesityEducationTab", obesityEducationTab)
         # tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
+
       )
     )
   )

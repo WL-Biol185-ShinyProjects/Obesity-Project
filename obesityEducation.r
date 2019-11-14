@@ -1,7 +1,7 @@
 obesityEducationTab <- list(
   
   titlePanel("Education & Obesity"),
-  sidebarPanel(
+    sidebarPanel(
     checkboxGroupInput(
       "educationInput", "Choose Education Level:",
       choices = list(
@@ -67,6 +67,7 @@ obesityEducationTotals <- obesityEducationData                       %>%
   as_tibble()                                                        %>% 
   mutate(
     obesePercent = (numberObese/sampleSize)*100)
+
 
 
 

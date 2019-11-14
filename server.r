@@ -35,10 +35,10 @@ function(input, output, session) {
       ylab("Percent Obese")                
     
   })
-  
-  output$stateResult <- renderText({
+
+ output$stateResult <- renderText({
     
-    paste(input$location, collapse = ", ")
+ paste(input$location, collapse = ", ")
     
   })
   
@@ -56,10 +56,10 @@ function(input, output, session) {
       filter(
         educationLevel %in% input$educationInput,
         location       %in% input$location)                                    %>%
-      ggplot(aes(location, obesePercent, fill = educationLevel)) +
-      geom_col(position = "dodge", alpha = 0.5)                  +
-      xlab("State")                                              +
-      ylab("% Obese")
+        ggplot(aes(location, obesePercent, fill = educationLevel)) +
+        geom_col(position = "dodge", alpha = 0.5)                  +
+        xlab("State")                                              +
+        ylab("% Obese")
     
   })
   

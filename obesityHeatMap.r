@@ -9,16 +9,16 @@ obesityHeatTab <- list(
   fluidRow(box(width = 12, background = "black", p("The plot below shows an overview of obesity in the United States from 2009-2018"))),
   
   sidebarPanel(
-    checkboxGroupInput("yearInput", "Choose the Year:",
-                       choices = list(
-                         "2011"  = "2011",
-                         "2012"  = "2012",
-                         "2013"  = "2013",
-                         "2014"  = "2014",
-                         "2015"  = "2015",
-                         "2016"  = "2016",
-                         "2017"  = "2017",
-                         "2018"  = "2018")
+  checkboxGroupInput("yearInput", "Choose the Year:",
+      choices = list(
+        "2011"  = "2011",
+        "2012"  = "2012",
+        "2013"  = "2013",
+        "2014"  = "2014",
+        "2015"  = "2015",
+        "2016"  = "2016",
+        "2017"  = "2017",
+        "2018"  = "2018")
     ),
     textOutput("checkYear"),
     
@@ -37,10 +37,10 @@ obesityHeatTab <- list(
     ),
     textOutput("stateResult2"),
     mainPanel(plotOutput("myLineGraph"), width = "100%")
-  )
-)
+    )
+    )
 
-
+          
 
 
 
@@ -73,4 +73,11 @@ obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column
 
 obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
 obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
+
+
+
+
+
+
+
 
