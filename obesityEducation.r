@@ -13,18 +13,6 @@ obesityEducationTab <- list(
       ),
       selected = c("College graduate", "High school graduate", "Less than high school")
       ),
-    
-    selectInput(inputId = "location",
-                label = "Choose States:",
-                choices = list(
-                  "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
-                  "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
-                  "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
-                  "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
-                  "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
-                ),
-                
-              textOutput("checkEdu"),
               
               selectInput(inputId = "location",
                           label = "Choose States:",
@@ -35,27 +23,16 @@ obesityEducationTab <- list(
                             "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
                             "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                           ),
+                          selected = c("NY", "VA"),
                           selectize = TRUE,
                           multiple = TRUE
-                          
               ),
-              textOutput("stateResult"),
+              textOutput("stateResult")
+              ),
               mainPanel(plotOutput("barPlotEdu")
               )
               )
               )
-
-                selected = c("NY", "VA"),
-                selectize = TRUE,
-                multiple = TRUE
-    ),
-    textOutput("stateResult")
-    ),
-    mainPanel(plotOutput("barPlotEdu")
-    )
-  )
-)
-
 
 
 #data manipulation for education
@@ -67,8 +44,7 @@ obesityEducation <- obesityData                                                 
   select(1,3,8,11,17,20)                                                          %>%
   filter(Education               != "N/A",
          YearStart               == "2018",
-         Question                == 
-           "Percent of adults aged 18 years and older who have obesity")
+         Question                == "Percent of adults aged 18 years and older who have obesity")
 
 colnames(obesityEducation) [1] <- "year"
 colnames(obesityEducation) [2] <- "location"
@@ -93,6 +69,9 @@ obesityEducationTotals <- obesityEducationData                       %>%
   mutate(
     obesePercent = (numberObese/sampleSize)*100)
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> d33f056783dbbf185409086517709b9e8591b66c
