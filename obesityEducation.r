@@ -44,8 +44,7 @@ obesityEducation <- obesityData                                                 
   select(1,3,8,11,17,20)                                                          %>%
   filter(Education               != "N/A",
          YearStart               == "2018",
-         Question                == 
-           "Percent of adults aged 18 years and older who have obesity")
+         Question                == "Percent of adults aged 18 years and older who have obesity")
 
 colnames(obesityEducation) [1] <- "year"
 colnames(obesityEducation) [2] <- "location"
@@ -69,54 +68,4 @@ obesityEducationTotals <- obesityEducationData                       %>%
   as_tibble()                                                        %>% 
   mutate(
     obesePercent = (numberObese/sampleSize)*100)
-
-obesityEducation <- list(
-  
-  titlePanel("Education & Obesity in the United States"),
-
-#fluidPage(
-  
-  
- # title = "Obesity & Education",
-  #titlePanel("Education & Obesity"),
-
-  
-#  sidebarLayout(
-#    sidebarPanel(
- #     checkboxInput(
-#       inputId = "col",
- #       label = "College Graduate",
-  #      value = TRUE
-  #    ),
-   #   checkboxInput(
-    #    inputId = "hs",
-     #   label = "High School Graduate",
-      #  value = TRUE
-      #),    
-      #checkboxInput(
-       # inputId = "lessHs",
-      #  label = "Less Than High School",
-       # value = TRUE
-    #  ),     
-     # checkboxInput(
-      #  inputId = "someCol",
-       # label = "Some College or Technical School",
-      #  value = TRUE
-    #  ),     
-    
-    
-
-    #mainPanel(
-      #plotOutput("barPlotEdu"))
-  #)
- #)
-#)
-
- #   mainPanel(
- #     plotOutput("barPlotEdu")
- #   )
-#  )
-# )
-)
-
 
