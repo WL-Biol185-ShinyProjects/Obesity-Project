@@ -1,13 +1,11 @@
 obesityIncomeTab <- list(
+    
+  titlePanel("Income & Obesity in the United States"),
   
-  fluidPage(
-    
-    titlePanel("Income & Obesity in the United States"),
-    
+  fluidRow(box(width = 12, background = "black", p("This bar graph shows the correlation between average state income and percent of obesity in the state populace."))),
+  
     sidebarLayout(
-      
       sidebarPanel(
-        
         checkboxGroupInput(
           "incomeLevel", "Choose Income Level:",
           choices = list(
@@ -18,10 +16,11 @@ obesityIncomeTab <- list(
             "$50,000 - $74,999"   = "$50,000 - $74,999",
             "$75,000 or greater"  = "$75,000 or greater"
           ),
+          selected = c("$15,000 - $24,999", "$35,000 - $49,999", "$75,000 or greater")
         ),
         textOutput("checkIncome"),
         
-        selectInput(inputId = "location",
+        selectInput(inputId = "includeLocation",
                     label = "Choose States:",
                     choices = list(
                       "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
@@ -33,18 +32,13 @@ obesityIncomeTab <- list(
                     selectize = TRUE,
                     multiple = TRUE,
                     selected = c("VA", "WA")
-                    
-        ), 
-        
+        ),
         textOutput("stateResult3")
-        
       ),
       
-      mainPanel(plotOutput("myIncomeGraph"), width = "100%")
-      
+      mainPanel(plotOutput("myIncomeGraph"))
     )
   )
-)
 
 library(tidyverse)
 library(dplyr)
