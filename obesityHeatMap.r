@@ -162,5 +162,13 @@ ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
 
 
 
+obesityHeat <- list(
+  
+  titlePanel("Obesity in the United States"),
+  mainPanel(
+    fluidRow(leafletOutput("myHeatMap")),
+    fluidRow(plotOutput("myLinePlot"))
+  )
+)
 
 
