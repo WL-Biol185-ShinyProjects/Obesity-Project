@@ -18,7 +18,7 @@ fluidPage(
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
         menuItem("Obesity and Income in 2018"   , tabName = "obesityIncomeTab"   )
       )
-    ),
+      ),
     
     
     

@@ -100,75 +100,23 @@ ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
 
 
 
+# create heatmap 
+library(rgdal)
+library(leaflet)
+
+usaStates <- rgdal::readOGR("states.geo.json")
+stateCodes <- read.csv("states.csv")
+
+pal <- colorNumeric("viridis", NULL)
+
+leaflet(usaStates) %>%
+  addTiles() %>%
+  addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 1,
+              fillColor = ~pal(log10(CENSUSAREA)),
+              label = ~paste0(NAME, ": ", formatC(CENSUSAREA, big.mark = ","))) %>%
+  addLegend(pal = pal, values = ~log10(CENSUSAREA), opacity = 1.0,
+            labFormat = labelFormat(transform = function(x) round(10^x)))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-obesityHeat <- list(
-  
-  titlePanel("Obesity in the United States"),
-  mainPanel(
-    fluidRow(leafletOutput("myHeatMap")),
-    fluidRow(plotOutput("myLinePlot"))
-  )
-)
 
 
