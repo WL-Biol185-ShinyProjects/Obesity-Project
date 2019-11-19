@@ -72,7 +72,7 @@ obesityGeneralYear <- filter(obesityGeneral, YearStart == c("2018", "2017"))
 #filter table for 5 columns that we want
 obesityHeat <- obesityGeneralYear %>%
   select(1, 3, 8, 11, 17)
- 
+
 #renamed columns
 colnames (obesityHeat) [1]  <- "year"
 colnames (obesityHeat) [2]  <- "state"

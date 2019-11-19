@@ -25,9 +25,9 @@ function(input, output, session) {
   
   output$myLineGraph <- renderPlot({
     obeseTotal                                     %>%
-    filter(
-             yearNum     %in% input$yearInput,
-             state       %in% input$state)         %>%     
+      filter(
+        yearNum     %in% input$yearInput,
+        state       %in% input$state)         %>%     
       
       ggplot( aes(yearNum, percentObese, color=state)) + 
       geom_line()                                      + 
@@ -35,7 +35,7 @@ function(input, output, session) {
       ylab("Percent Obese")                
     
   })
-  
+
  output$stateResult <- renderText({
     
  paste(input$location, collapse = ", ")
@@ -57,12 +57,12 @@ function(input, output, session) {
         educationLevel %in% input$educationInput,
         location       %in% input$location)                                    %>%
         ggplot(aes(location, obesePercent, fill = educationLevel)) +
-        geom_col(position = "dodge", alpha = 0.5)                  +
+        geom_col(position = "dodge", alpha = 0.7)                  +
         xlab("State")                                              +
         ylab("% Obese")
     
   })
- 
+  
   
   
   output$obesityIncome <- renderPlot({
@@ -72,7 +72,7 @@ function(input, output, session) {
                      "$35,000-$49,999",
                      "$50,000-$74,999",
                      "$75,000 or greater"
-                     )
+    )
     
     obesityIncomeTotals                             %>%
       filter ( incomeLevel == input$incomeLevel )   %>%
@@ -84,6 +84,5 @@ function(input, output, session) {
     
   })
   
-
+  
 }
-
