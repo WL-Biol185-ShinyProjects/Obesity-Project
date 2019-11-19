@@ -11,7 +11,7 @@ source("obesityEducation.r")
 
 fluidPage(
   dashboardPage(
-    dashboardHeader(title="Obesity in the United States"),
+    dashboardHeader(title="Obesity in the USA"),
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
