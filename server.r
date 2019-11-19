@@ -6,7 +6,7 @@ library(tidyverse)
 
 source("obesityHeatMap.r")
 source("obesityEducation.r")
-#source("obesityIncome.r")
+source("obesityIncome.r")
 
 function(input, output, session) {
   
@@ -25,9 +25,9 @@ function(input, output, session) {
   
   output$myLineGraph <- renderPlot({
     obeseTotal                                     %>%
-    filter(
-             yearNum     %in% input$yearInput,
-             state       %in% input$state)         %>%     
+      filter(
+        yearNum     %in% input$yearInput,
+        state       %in% input$state)         %>%     
       
       ggplot( aes(yearNum, percentObese, color=state)) + 
       geom_line()                                      + 
@@ -35,7 +35,7 @@ function(input, output, session) {
       ylab("Percent Obese")                
     
   })
-  
+
  output$stateResult <- renderText({
     
  paste(input$location, collapse = ", ")
@@ -57,33 +57,33 @@ function(input, output, session) {
         educationLevel %in% input$educationInput,
         location       %in% input$location)                                    %>%
         ggplot(aes(location, obesePercent, fill = educationLevel)) +
-        geom_col(position = "dodge", alpha = 0.5)                  +
+        geom_col(position = "dodge", alpha = 0.7)                  +
         xlab("State")                                              +
         ylab("% Obese")
     
   })
- 
   
   
-  output$obesityIncome <- renderPlot({
+  
+  output$stateResult3 <- renderText({
     
-    incomeLevel <- c("$15,000-$24,999",
-                     "$25,000-$34,999",
-                     "$35,000-$49,999",
-                     "$50,000-$74,999",
-                     "$75,000 or greater"
-                     )
+    stateInput <- paste(input$includeLocation, collapse = ", ")
+    paste(stateInput)
     
-    obesityIncomeTotals                             %>%
-      filter ( incomeLevel == input$incomeLevel )   %>%
-      filter (location %in% input$includeLocation)  %>%
-      ggplot(aes_string("incomeLevel", "obesePercent", fill = "location")) + 
-      geom_boxplot()                                                       + 
-      xlab("Income Level")                                                 + 
+  })
+  
+  
+  output$myIncomeGraph <- renderPlot({
+    
+    obesityIncomeTotals                           %>%
+      filter(incomeLevel %in% input$incomeLevel)  %>%
+      filter(location    %in% input$location)     %>%
+      ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
+      geom_col(position = "dodge", alpha = 0.5)               + 
+      xlab("Income Level")                                    + 
       ylab("% Obese")
     
   })
   
-
+  
 }
-

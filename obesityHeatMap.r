@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 obesityHeatTab <- list(
   
   titlePanel("Obesity in the United States"   ),
@@ -49,7 +47,6 @@ obesityHeatTab <- list(
 
 #data cleaning code for this this tab
 
->>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
 
 library(tidyverse)
 library(dplyr)
@@ -63,7 +60,7 @@ obesityGeneralYear <- filter(obesityGeneral, YearStart == c("2018", "2017"))
 #filter table for 5 columns that we want
 obesityHeat <- obesityGeneralYear %>%
   select(1, 3, 8, 11, 17)
- 
+
 #renamed columns
 colnames (obesityHeat) [1]  <- "year"
 colnames (obesityHeat) [2]  <- "state"

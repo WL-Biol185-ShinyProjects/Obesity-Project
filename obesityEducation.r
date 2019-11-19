@@ -1,36 +1,38 @@
 obesityEducationTab <- list(
-            
-            titlePanel("Education & Obesity"),
-                 sidebarPanel(
-                 checkboxGroupInput(
-                 "educationInput", "Choose Education Level:",
-                  choices = list(
-                  "College Graduate"     = "College graduate",
-                  "Highschool Graduate"  = "High school graduate",
-                  "Less than Highschool" = "Less than high school",
-                  "Technical School"     = "Some college or technical school"
-                )
+   
+  titlePanel("Education & Obesity"),
+   sidebarLayout(
+    sidebarPanel(
+    checkboxGroupInput(
+      "educationInput", "Choose Education Level:",
+      choices = list(
+        "College Graduate"     = "College graduate",
+        "Highschool Graduate"  = "High school graduate",
+        "Less than Highschool" = "Less than high school",
+        "Technical School"     = "Some college or technical school"
+      ),
+      selected = c("College graduate", "High school graduate", "Less than high school")
+    ),
+    
+    selectInput(inputId = "location",
+                label = "Choose States:",
+                choices = list(
+                  "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
+                  "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
+                  "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
+                  "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
+                  "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                 ),
-              textOutput("checkEdu"),
-              
-              selectInput(inputId = "location",
-                          label = "Choose States:",
-                          choices = list(
-                            "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
-                            "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
-                            "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
-                            "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
-                            "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
-                          ),
-                          selectize = TRUE,
-                          multiple = TRUE
-                          
-              ),
-              textOutput("stateResult"),
-              mainPanel(plotOutput("barPlotEdu")
-              )
-            )
+                selected = c("NY", "VA"),
+                selectize = TRUE,
+                multiple = TRUE
+    ),
+    textOutput("stateResult")
+    ),
+    mainPanel(plotOutput("barPlotEdu")
+    )
   )
+)
 
 
 #data manipulation for education
@@ -43,7 +45,7 @@ obesityEducation <- obesityData                                                 
   filter(Education               != "N/A",
          YearStart               == "2018",
          Question                == 
-                    "Percent of adults aged 18 years and older who have obesity")
+           "Percent of adults aged 18 years and older who have obesity")
 
 colnames(obesityEducation) [1] <- "year"
 colnames(obesityEducation) [2] <- "location"
@@ -56,7 +58,7 @@ colnames(obesityEducation) [6] <- "educationLevel"
 obesityEducationData <- obesityEducation     %>%
   as_tibble()                                %>% 
   mutate(
-  numberObese = sampleSize*(percent/100))
+    numberObese = sampleSize*(percent/100))
 
 obesityEducationData$location <- as.factor(obesityEducationData$location)
 obesityEducationData$year <- as.factor(obesityEducationData$year)
@@ -66,7 +68,7 @@ obesityEducationData$educationLevel <- as.factor(obesityEducationData$educationL
 obesityEducationTotals <- obesityEducationData                       %>%
   as_tibble()                                                        %>% 
   mutate(
-  obesePercent = (numberObese/sampleSize)*100)
+    obesePercent = (numberObese/sampleSize)*100)
 
 obesityEducation <- list(
   
