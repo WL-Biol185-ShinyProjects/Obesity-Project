@@ -12,7 +12,7 @@ obesityEducationTab <- list(
         "Technical School"     = "Some college or technical school"
       ),
       selected = c("College graduate", "High school graduate", "Less than high school")
-    ),
+      ),
     
     selectInput(inputId = "location",
                 label = "Choose States:",
@@ -93,53 +93,6 @@ obesityEducationTotals <- obesityEducationData                       %>%
   mutate(
     obesePercent = (numberObese/sampleSize)*100)
 
-obesityEducation <- list(
-  
-  titlePanel("Education & Obesity in the United States"),
 
-#fluidPage(
-  
-  
- # title = "Obesity & Education",
-  #titlePanel("Education & Obesity"),
-
-  
-#  sidebarLayout(
-#    sidebarPanel(
- #     checkboxInput(
-#       inputId = "col",
- #       label = "College Graduate",
-  #      value = TRUE
-  #    ),
-   #   checkboxInput(
-    #    inputId = "hs",
-     #   label = "High School Graduate",
-      #  value = TRUE
-      #),    
-      #checkboxInput(
-       # inputId = "lessHs",
-      #  label = "Less Than High School",
-       # value = TRUE
-    #  ),     
-     # checkboxInput(
-      #  inputId = "someCol",
-       # label = "Some College or Technical School",
-      #  value = TRUE
-    #  ),     
-    
-    
-
-    #mainPanel(
-      #plotOutput("barPlotEdu"))
-  #)
- #)
-#)
-
- #   mainPanel(
- #     plotOutput("barPlotEdu")
- #   )
-#  )
-# )
-)
 
 
