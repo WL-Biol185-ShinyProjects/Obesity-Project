@@ -69,9 +69,3 @@ obesityEducationTotals <- obesityEducationData                       %>%
   mutate(
     obesePercent = (numberObese/sampleSize)*100)
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> d33f056783dbbf185409086517709b9e8591b66c
