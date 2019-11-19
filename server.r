@@ -58,8 +58,9 @@ function(input, output, session) {
         location       %in% input$location)                                    %>%
         ggplot(aes(location, obesePercent, fill = educationLevel)) +
         geom_col(position = "dodge", alpha = 0.7)                  +
-        xlab("State")                                              +
-        ylab("% Obese")
+        xlab("States")                                              +
+        ylab("% Obese")                                            +
+        labs(fill = "Education Level")
     
   })
   
