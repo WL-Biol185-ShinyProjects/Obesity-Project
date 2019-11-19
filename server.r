@@ -68,8 +68,7 @@ function(input, output, session) {
   
   output$stateResult3 <- renderText({
     
-    stateInput <- paste(input$includeLocation, collapse = ", ")
-    paste(stateInput)
+    paste(input$includeLocation, collapse = ", ")
     
   })
   
@@ -78,7 +77,7 @@ function(input, output, session) {
     
     obesityIncomeTotals                           %>%
       filter(incomeLevel %in% input$incomeLevel)  %>%
-      filter(location    %in% input$location)     %>%
+      filter(location    %in% input$includeLocation)     %>%
       ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
       geom_col(position = "dodge", alpha = 0.5)               + 
       xlab("Income Level")                                    + 
