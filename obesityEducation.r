@@ -32,10 +32,7 @@ obesityEducationTab <- list(
             )
   )
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
 #data manipulation for education
 library(tidyverse)
 library(dplyr)
@@ -70,11 +67,6 @@ obesityEducationTotals <- obesityEducationData                       %>%
   as_tibble()                                                        %>% 
   mutate(
   obesePercent = (numberObese/sampleSize)*100)
-
-
-
-
-<<<<<<< HEAD
 
 obesityEducation <- list(
   
@@ -125,6 +117,4 @@ obesityEducation <- list(
 # )
 )
 
-=======
->>>>>>> c3a3f32f6c089d2c6d9bafffeccc47c23cd8f2bb
 
