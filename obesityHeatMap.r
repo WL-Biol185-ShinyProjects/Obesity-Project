@@ -79,5 +79,13 @@ obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
 
 
 
+obesityHeat <- list(
+  
+  titlePanel("Obesity in the United States"),
+  mainPanel(
+    fluidRow(leafletOutput("myHeatMap")),
+    fluidRow(plotOutput("myLinePlot"))
+  )
+)
 
 

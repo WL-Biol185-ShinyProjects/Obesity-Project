@@ -6,7 +6,7 @@ library(tidyverse)
 
 source("obesityHeatMap.r")
 source("obesityEducation.r")
-#source("obesityIncome.r")
+source("obesityIncome.r")
 
 function(input, output, session) {
   
@@ -66,21 +66,22 @@ function(input, output, session) {
   
   
   
-  output$obesityIncome <- renderPlot({
+  output$stateResult3 <- renderText({
     
-    incomeLevel <- c("$15,000-$24,999",
-                     "$25,000-$34,999",
-                     "$35,000-$49,999",
-                     "$50,000-$74,999",
-                     "$75,000 or greater"
-    )
+    stateInput <- paste(input$includeLocation, collapse = ", ")
+    paste(stateInput)
     
-    obesityIncomeTotals                             %>%
-      filter ( incomeLevel == input$incomeLevel )   %>%
-      filter (location %in% input$includeLocation)  %>%
-      ggplot(aes_string("incomeLevel", "obesePercent", fill = "location")) + 
-      geom_boxplot()                                                       + 
-      xlab("Income Level")                                                 + 
+  })
+  
+  
+  output$myIncomeGraph <- renderPlot({
+    
+    obesityIncomeTotals                           %>%
+      filter(incomeLevel %in% input$incomeLevel)  %>%
+      filter(location    %in% input$location)     %>%
+      ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
+      geom_col(position = "dodge", alpha = 0.5)               + 
+      xlab("Income Level")                                    + 
       ylab("% Obese")
     
   })

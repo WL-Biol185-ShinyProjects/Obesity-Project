@@ -7,11 +7,13 @@ library(ggplot2)
 
 source("obesityHeatMap.r"  )
 source("obesityEducation.r")
-#source("obesityIncome.r"  )
+source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
-    dashboardHeader(title="Obesity in the United States"),
+    
+    dashboardHeader(title="Obesity in the USA"),
+
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
@@ -28,18 +30,14 @@ fluidPage(
          tabItems(
         
         tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
-        tabItem(tabName = "obesityEducationTab", obesityEducationTab)
-        # tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
-
+        tabItem(tabName = "obesityEducationTab", obesityEducationTab),
+        tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
       )
-    )
-  )
-)
+      )
+      )
+      )
 
-
-
-
-
+  
 #Make header page
 #on headed page need heat map of % of adults 18+ with obesity
 #add desciption of why this is relevant
