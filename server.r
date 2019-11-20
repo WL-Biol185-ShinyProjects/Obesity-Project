@@ -55,7 +55,6 @@ function(input, output, session) {
   
   usaState2018Merge <- left_join(obeseTotalState2018, stateCodes)
   
-  
   pal <- colorNumeric("viridis", NULL)
   
   output$myHeatMap   <- renderLeaflett({
@@ -67,7 +66,6 @@ function(input, output, session) {
                   fillColor = ~pal(usaState2018Merge$percentObese),
                   label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, big.mark = ","))) %>%
       addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.7)
-    
     
   })
 
