@@ -2,6 +2,9 @@ library(shiny)
 library(shinydashboard)
 library(leaflet)
 library(ggplot2)
+library(rgdal)
+library(dbplyr)
+library(tidyverse)
 
 #source each tab into the general ui.r
 
