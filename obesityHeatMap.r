@@ -84,7 +84,7 @@ obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column
   filter(percent != "N/A")
 
 obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
-obesityHeatPercent$year <- as.factor(obesityHeatPercent$year)
+obesityHeatPercent$year  <- as.factor(obesityHeatPercent$year)
 
 
 obeseTotal <- obesityGeneralYearsPercent %>%
@@ -106,8 +106,8 @@ library(leaflet)
 library(tidyverse)
 library(dplyr)
 
-usaStates <- rgdal::readOGR("states.geo.json")
-stateCodes <- read.csv("states.csv")
+usaStates      <- rgdal::readOGR("states.geo.json")
+stateCodes     <- read.csv("states.csv")
 obeseTotal2018 <- filter(obeseTotal, year == "2018")
 
 obeseTotalState2018 <- obeseTotal2018 %>%
