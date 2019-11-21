@@ -24,7 +24,7 @@ function(input, output, session) {
   })
   
   output$myLineGraph <- renderPlot({
-    obeseTotal                                     %>%
+    obeseTotal                                %>%
       filter(
         yearNum     %in% input$yearInput,
         state       %in% input$state)         %>%     
