@@ -5,7 +5,9 @@ library(ggplot2)
 library(rgdal)
 library(dbplyr)
 library(tidyverse)
-obesityData <- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
+library(sp)
+
+#obesityData <- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
 
 #source each tab into the general ui.r
 
@@ -25,7 +27,6 @@ fluidPage(
       ),
     
     
-    
     #creating tabs in the app
     dashboardBody(
       
@@ -38,21 +39,3 @@ fluidPage(
       )
       )
       )
-
-  
-#Make header page
-#on headed page need heat map of % of adults 18+ with obesity
-#add desciption of why this is relevant
-
-#2nd tab
-#Education- another heat map with % of education level on each one as a pin
-#box plot below of x axis=state and y= % obese, color code with education levels (drop down box for state and check box box for education level)
-
-#3rd tab
-  #Poverty level with same obesity heat map
-  #bar graph x= income level (check box) and y=% obese, color by state (maybe drop down) 
-
-#geogyson look into this
-#Poverty level with same obesity heat map
-#bar graph x= income level (check box) and y=% obese, color by state (maybe drop down) 
-
