@@ -106,13 +106,13 @@ pal <- colorNumeric("viridis", NULL)
   output$densPlotEdu <- renderPlot({
     
     
-    obesityEducationTotals                 %>%
+    obesityEducationTotals                              %>%
       filter(
         educationLevel %in% input$educationInputDens,
-        location       %in% input$locationDens)                                    %>%
+        location       %in% input$locationDens)         %>%
       ggplot(aes(obesePercent, fill = educationLevel)) + geom_density(alpha = 0.312) +
-      ylab("Density")                                                   +
-      xlab("% Obese")                                                   +
+      xlab("% Obese")                                                                +
+      ylab("Density")                                                                +
       labs(fill = "Education Level")
     
   })
@@ -137,6 +137,22 @@ pal <- colorNumeric("viridis", NULL)
     
   })
   
-
+  output$stateResult3Dens <- renderText({
+    
+    paste(input$includeLocationDens, collapse = ", ")
+    
+  })
+  
+  output$myIncomeDensity <- renderPlot({
+    
+    obesityIncomeTotals                               %>%
+      filter(incomeLevel %in% input$incomeLevelDens)  %>%
+      filter(location %in% input$includeLocationDens) %>%
+      ggplot(aes(obesePercent, fill = incomeLevel)) + geom_density(alpha = 0.312) +
+      xlab("% Obese")                                                             +
+      ylab("Density")                                                             +
+      labs(fill = "Income Level")
+    
+  })
   
 }
