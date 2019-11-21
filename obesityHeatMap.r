@@ -52,10 +52,6 @@ obesityHeatTab <- list(
     
     
  
-          
-
-
-
 
 #data cleaning code for this this tab
 
