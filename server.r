@@ -114,7 +114,7 @@ function(input, output, session) {
       filter(incomeLevel %in% input$incomeLevel)  %>%
       filter(location    %in% input$includeLocation)     %>%
       ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
-      geom_col(position = "dodge", alpha = 0.5)               + 
+      geom_col(position = "dodge", alpha = 0.7)               + 
       xlab("Income Level")                                    + 
       ylab("% Obese")
     
