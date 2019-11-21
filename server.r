@@ -79,7 +79,7 @@ function(input, output, session) {
         location       %in% input$locationDens)                                    %>%
       ggplot(aes(obesePercent, fill = educationLevel)) + geom_density(alpha = 0.312) +
       ylab("Density")                                                   +
-      ylab("% Obese")                                                   +
+      xlab("% Obese")                                                   +
       labs(fill = "Education Level")
     
   })

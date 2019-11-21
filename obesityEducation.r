@@ -37,6 +37,7 @@ obesityEducationTab <- list(
   ),
 
   fluidRow(box(width = 12, background = "black", p("The graph below shows..."))),
+   
   sidebarLayout(
     sidebarPanel(
       checkboxGroupInput(
