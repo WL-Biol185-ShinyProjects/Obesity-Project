@@ -2,6 +2,10 @@ library(shiny)
 library(shinydashboard)
 library(leaflet)
 library(ggplot2)
+library(rgdal)
+library(dbplyr)
+library(tidyverse)
+obesityData <- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
 
 #source each tab into the general ui.r
 
@@ -11,16 +15,14 @@ source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
-    
     dashboardHeader(title="Obesity in the USA"),
-
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
         menuItem("Obesity and Income in 2018"   , tabName = "obesityIncomeTab"   )
       )
-    ),
+      ),
     
     
     
@@ -47,5 +49,10 @@ fluidPage(
 #box plot below of x axis=state and y= % obese, color code with education levels (drop down box for state and check box box for education level)
 
 #3rd tab
+  #Poverty level with same obesity heat map
+  #bar graph x= income level (check box) and y=% obese, color by state (maybe drop down) 
+
+#geogyson look into this
 #Poverty level with same obesity heat map
 #bar graph x= income level (check box) and y=% obese, color by state (maybe drop down) 
+
