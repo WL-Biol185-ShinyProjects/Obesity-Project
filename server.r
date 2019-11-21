@@ -35,6 +35,41 @@ function(input, output, session) {
       ylab("Percent Obese")                
     
   })
+  
+  usaStates      <- rgdal::readOGR("states.geo.json")
+  stateCodes     <- read.csv("states.csv")
+  obeseTotal2018 <- filter(obeseTotal, year == "2018")
+  
+  obeseTotalState2018 <- obeseTotal2018 %>%
+    filter(state %in% c(                 "AL", "AK", "AZ", "AR", "CA", "CO", 
+                                         "CT", "DE", "DC", "FL", "GA", "HI", 
+                                         "ID", "IL", "IN", "IA", "KS", "KY", 
+                                         "LA", "ME", "MT", "NE", "NV", "NH", 
+                                         "NJ", "NM", "NY", "NC", "ND", "OH", 
+                                         "OK", "OR", "MD", "MA", "MI", "MN", 
+                                         "MS", "MO", "PA", "RI", "SC", "SD", 
+                                         "TN", "TX", "UT", "VT", "VA", "WA",
+                                         "WV", "WI", "WY" ))
+  
+  colnames (obeseTotalState2018) [1] <- "Abbreviation"
+  
+  usaState2018Merge <- left_join(obeseTotalState2018, stateCodes)
+  
+  
+  pal <- colorNumeric("viridis", NULL)
+  
+  output$myHeatMap   <- renderLeaflett({
+    
+    leaflet(usaStates) %>%
+      setView(-96, 37.8, 4) %>%
+      addTiles() %>%
+      addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 1,
+                  fillColor = ~pal(usaState2018Merge$percentObese),
+                  label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, big.mark = ","))) %>%
+      addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.7)
+    
+    
+  })
 
  output$stateResult <- renderText({
     
