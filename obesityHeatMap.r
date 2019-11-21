@@ -83,13 +83,13 @@ obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
 
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%
-  summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
+  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
 obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
 
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%
-  summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
+  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
 
 
