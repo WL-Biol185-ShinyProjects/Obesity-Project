@@ -63,37 +63,38 @@ obesityHeatTab <- list(
 library(tidyverse)
 library(dplyr)
 
-#filtering for specific question
 obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
-#filtering for 2018
-obesityGeneralYear <- filter(obesityGeneral, YearStart == "2018")
+obesityGeneralYears <- filter(obesityGeneral, YearStart == c("2018"))
 
-#filter table for 5 columns that we want
-obesityHeat <- obesityGeneralYear %>%
+obesityGeneralYears <- obesityGeneral %>%
   select(1, 3, 8, 11, 17)
 
 #renamed columns
-colnames (obesityHeat) [1]  <- "year"
-colnames (obesityHeat) [2]  <- "state"
-colnames (obesityHeat) [3]  <- "question" 
-colnames (obesityHeat) [4]  <- "percent" 
-colnames (obesityHeat) [5]  <- "sampleSize"
+colnames (obesityGeneralYears) [1]  <- "year"
+colnames (obesityGeneralYears) [2]  <- "state"
+colnames (obesityGeneralYears) [3]  <- "question" 
+colnames (obesityGeneralYears) [4]  <- "percent" 
+colnames (obesityGeneralYears) [5]  <- "sampleSize"
 
-obesityHeatPercent <- obesityHeat %>% #taking of N/A from percent column 
+obesityGeneralYearsPercent <- obesityGeneralYears %>% #taking of N/A from percent column 
   filter(percent != "N/A")
 
-obesityHeatPercent$state <- as.factor(obesityHeatPercent$state) #made state a factor
-obesityHeatPercent$year  <- as.factor(obesityHeatPercent$year)
+obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state) #made state a factor
+obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
 
+#create bar graph of increase in obesity 
 
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%
   summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
 
-
-
 obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
+
+obeseTotal <- obesityGeneralYearsPercent %>%
+  group_by(state, year) %>%
+  summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
+
 
 
 ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
