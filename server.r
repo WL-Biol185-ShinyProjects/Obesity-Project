@@ -156,3 +156,4 @@ pal <- colorNumeric("viridis", NULL)
   })
   
 }
+
