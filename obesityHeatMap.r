@@ -123,15 +123,17 @@ colnames (obeseTotalState2018) [1] <- "Abbreviation"
 usaState2018Merge <- left_join(obeseTotalState2018, stateCodes)
 
 
-pal <- colorNumeric("viridis", NULL)
+pal <- colorNumeric("YlOrRd", NULL)
 
-leaflet(usaStates) %>%
+leaflet(usaStates)      %>%
   setView(-96, 37.8, 4) %>%
-  addTiles() %>%
-  addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 1,
+  addTiles()            %>%
+  addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
               fillColor = ~pal(usaState2018Merge$percentObese),
-              label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, big.mark = ","))) %>%
-  addLegend(pal = pal, values = (usaState2018Merge$percentObese), opacity = 1.0)
+              label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese), "%")) %>%
+  addLegend(pal = pal, values = (usaState2018Merge$percentObese), opacity = 0.8)
+
+
 
 
 
