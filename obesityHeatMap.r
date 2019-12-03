@@ -91,11 +91,6 @@ obeseTotal <- obesityGeneralYearsPercent %>%
 
 obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
 
-obeseTotal <- obesityGeneralYearsPercent %>%
-  group_by(state, year) %>%
-  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
-
-
 
 ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
 
