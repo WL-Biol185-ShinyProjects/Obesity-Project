@@ -51,8 +51,8 @@ stateCodes     <- read.csv("states.csv")
    
       pal <- colorNumeric("YlOrRd", NULL)
    
-       leaflet(usaStates)  
-      setView(-96, 37.8, 4) %>%
+      leaflet(usaStates)     %>%
+      setView(-96, 37.8, 4)  %>%
        addTiles()            %>%
        addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
                fillColor = ~pal(usaState2018Merge$percentObese),
