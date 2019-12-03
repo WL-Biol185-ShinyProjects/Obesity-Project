@@ -5,6 +5,7 @@ library(tidyverse)
 #call csv data files
 
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
+obeseTotal <- read.csv("obeseTotal.csv")
 
 #source each individual R script for each tab 
 

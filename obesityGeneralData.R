@@ -1,6 +1,8 @@
 library(tidyverse)
 library(dplyr)
 
+write.csv(obeseTotal, "obeseTotal.csv")
+
 obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
 obesityGeneralYears <- filter(obesityGeneral, YearStart == c("2018"))
@@ -32,8 +34,6 @@ obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%
   summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
-
-write.table(obeseTotal)
 
 
 # create heatmap 

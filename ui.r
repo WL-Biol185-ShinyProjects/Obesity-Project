@@ -11,6 +11,7 @@ library(sp)
 #call csv data files
 
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
+obeseTotal <- read.csv("obeseTotal.csv")
 
 #source each tab into the general ui.r
 
