@@ -1,0 +1,221 @@
+"","year","location","question","percent","sampleSize","educationLevel","numberObese","obesePercent"
+"1","2018","SC","Percent of adults aged 18 years and older who have obesity",36.8,2974,"High school graduate",1094.432,36.8
+"2","2018","NM","Percent of adults aged 18 years and older who have obesity",39.1,721,"Less than high school",281.911,39.1
+"3","2018","ID","Percent of adults aged 18 years and older who have obesity",23.1,1218,"College graduate",281.358,23.1
+"4","2018","NV","Percent of adults aged 18 years and older who have obesity",33.6,254,"Less than high school",85.344,33.6
+"5","2018","KY","Percent of adults aged 18 years and older who have obesity",37.8,717,"Less than high school",271.026,37.8
+"6","2018","WA","Percent of adults aged 18 years and older who have obesity",31.4,618,"Less than high school",194.052,31.4
+"7","2018","GA","Percent of adults aged 18 years and older who have obesity",36.9,757,"Less than high school",279.333,36.9
+"8","2018","IL","Percent of adults aged 18 years and older who have obesity",35.7,1276,"Some college or technical school",455.532,35.7
+"9","2018","AL","Percent of adults aged 18 years and older who have obesity",36.6,1854,"High school graduate",678.564,36.6
+"10","2018","SD","Percent of adults aged 18 years and older who have obesity",28.3,1913,"High school graduate",541.379,28.3
+"11","2018","GU","Percent of adults aged 18 years and older who have obesity",22.7,496,"College graduate",112.592,22.7
+"12","2018","CA","Percent of adults aged 18 years and older who have obesity",27.6,2719,"Some college or technical school",750.444,27.6
+"13","2018","WV","Percent of adults aged 18 years and older who have obesity",41.8,443,"Less than high school",185.174,41.8
+"14","2018","MD","Percent of adults aged 18 years and older who have obesity",31.7,4052,"High school graduate",1284.484,31.7
+"15","2018","AK","Percent of adults aged 18 years and older who have obesity",30.7,734,"High school graduate",225.338,30.7
+"16","2018","MD","Percent of adults aged 18 years and older who have obesity",35.6,3621,"Some college or technical school",1289.076,35.6
+"17","2018","ND","Percent of adults aged 18 years and older who have obesity",38.2,1422,"High school graduate",543.204,38.2
+"18","2018","NE","Percent of adults aged 18 years and older who have obesity",39.5,857,"Less than high school",338.515,39.5
+"19","2018","FL","Percent of adults aged 18 years and older who have obesity",37.2,1230,"Less than high school",457.56,37.2
+"20","2018","OK","Percent of adults aged 18 years and older who have obesity",33.2,357,"Less than high school",118.524,33.2
+"21","2018","IA","Percent of adults aged 18 years and older who have obesity",38,2654,"High school graduate",1008.52,38
+"22","2018","NM","Percent of adults aged 18 years and older who have obesity",25.7,2222,"College graduate",571.054,25.7
+"23","2018","MN","Percent of adults aged 18 years and older who have obesity",32.7,4745,"Some college or technical school",1551.615,32.7
+"24","2018","MT","Percent of adults aged 18 years and older who have obesity",25.8,300,"Less than high school",77.4,25.8
+"25","2018","VT","Percent of adults aged 18 years and older who have obesity",32.3,280,"Less than high school",90.44,32.3
+"26","2018","PR","Percent of adults aged 18 years and older who have obesity",35.3,659,"Less than high school",232.627,35.3
+"27","2018","NH","Percent of adults aged 18 years and older who have obesity",33.9,1422,"High school graduate",482.058,33.9
+"28","2018","VI","Percent of adults aged 18 years and older who have obesity",NA,NA,"Less than high school",NA,NA
+"29","2018","US","Percent of adults aged 18 years and older who have obesity",33,109407,"Some college or technical school",36104.31,33
+"30","2018","IN","Percent of adults aged 18 years and older who have obesity",34.6,542,"Less than high school",187.532,34.6
+"31","2018","KS","Percent of adults aged 18 years and older who have obesity",28.9,3861,"College graduate",1115.829,28.9
+"32","2018","VA","Percent of adults aged 18 years and older who have obesity",34.1,650,"Less than high school",221.65,34.1
+"33","2018","FL","Percent of adults aged 18 years and older who have obesity",25.9,4221,"College graduate",1093.239,25.9
+"34","2018","TN","Percent of adults aged 18 years and older who have obesity",35.3,1251,"Some college or technical school",441.603,35.3
+"35","2018","NC","Percent of adults aged 18 years and older who have obesity",37.8,433,"Less than high school",163.674,37.8
+"36","2018","NJ","Percent of adults aged 18 years and older who have obesity",27.8,669,"Some college or technical school",185.982,27.8
+"37","2018","CA","Percent of adults aged 18 years and older who have obesity",27.6,2096,"High school graduate",578.496,27.6
+"38","2018","TX","Percent of adults aged 18 years and older who have obesity",36.1,2787,"Some college or technical school",1006.107,36.1
+"39","2018","WY","Percent of adults aged 18 years and older who have obesity",24.4,1420,"College graduate",346.48,24.4
+"40","2018","PR","Percent of adults aged 18 years and older who have obesity",30.6,1513,"College graduate",462.978,30.6
+"41","2018","NV","Percent of adults aged 18 years and older who have obesity",25.2,997,"College graduate",251.244,25.2
+"42","2018","WI","Percent of adults aged 18 years and older who have obesity",34.8,1298,"Some college or technical school",451.704,34.8
+"43","2018","ID","Percent of adults aged 18 years and older who have obesity",32.7,249,"Less than high school",81.423,32.7
+"44","2018","UT","Percent of adults aged 18 years and older who have obesity",27.7,3017,"Some college or technical school",835.709,27.7
+"45","2018","NC","Percent of adults aged 18 years and older who have obesity",24.8,1546,"College graduate",383.408,24.8
+"46","2018","AZ","Percent of adults aged 18 years and older who have obesity",29.4,2366,"Some college or technical school",695.604,29.4
+"47","2018","MI","Percent of adults aged 18 years and older who have obesity",34.3,2455,"High school graduate",842.065,34.3
+"48","2018","ME","Percent of adults aged 18 years and older who have obesity",33.2,2954,"High school graduate",980.728,33.2
+"49","2018","NY","Percent of adults aged 18 years and older who have obesity",29,8541,"Some college or technical school",2476.89,29
+"50","2018","PA","Percent of adults aged 18 years and older who have obesity",32.3,1719,"High school graduate",555.237,32.3
+"51","2018","KY","Percent of adults aged 18 years and older who have obesity",34.3,2493,"College graduate",855.099,34.3
+"52","2018","RI","Percent of adults aged 18 years and older who have obesity",27.1,1326,"Some college or technical school",359.346,27.1
+"53","2018","OH","Percent of adults aged 18 years and older who have obesity",29.4,3521,"College graduate",1035.174,29.4
+"54","2018","AR","Percent of adults aged 18 years and older who have obesity",36.2,1705,"High school graduate",617.21,36.2
+"55","2018","MA","Percent of adults aged 18 years and older who have obesity",28.1,1382,"Some college or technical school",388.342,28.1
+"56","2018","MS","Percent of adults aged 18 years and older who have obesity",41.1,1660,"High school graduate",682.26,41.1
+"57","2018","CO","Percent of adults aged 18 years and older who have obesity",25.7,1721,"High school graduate",442.297,25.7
+"58","2018","WA","Percent of adults aged 18 years and older who have obesity",21.2,4974,"College graduate",1054.488,21.2
+"59","2018","HI","Percent of adults aged 18 years and older who have obesity",24,2103,"Some college or technical school",504.72,24
+"60","2018","OK","Percent of adults aged 18 years and older who have obesity",33,1606,"College graduate",529.98,33
+"61","2018","GA","Percent of adults aged 18 years and older who have obesity",35,2113,"High school graduate",739.55,35
+"62","2018","IL","Percent of adults aged 18 years and older who have obesity",32.9,1175,"High school graduate",386.575,32.9
+"63","2018","SD","Percent of adults aged 18 years and older who have obesity",32.7,2038,"Some college or technical school",666.426,32.7
+"64","2018","VT","Percent of adults aged 18 years and older who have obesity",35.5,1598,"High school graduate",567.29,35.5
+"65","2018","KY","Percent of adults aged 18 years and older who have obesity",37.7,2464,"High school graduate",928.928,37.7
+"66","2018","NY","Percent of adults aged 18 years and older who have obesity",31.2,8839,"High school graduate",2757.768,31.2
+"67","2018","AK","Percent of adults aged 18 years and older who have obesity",30.7,165,"Less than high school",50.655,30.7
+"68","2018","RI","Percent of adults aged 18 years and older who have obesity",35.5,349,"Less than high school",123.895,35.5
+"69","2018","IA","Percent of adults aged 18 years and older who have obesity",36.8,2521,"Some college or technical school",927.728,36.8
+"70","2018","CT","Percent of adults aged 18 years and older who have obesity",28.6,2327,"Some college or technical school",665.522,28.6
+"71","2018","UT","Percent of adults aged 18 years and older who have obesity",29.1,453,"Less than high school",131.823,29.1
+"72","2018","AR","Percent of adults aged 18 years and older who have obesity",34.1,1492,"College graduate",508.772,34.1
+"73","2018","CT","Percent of adults aged 18 years and older who have obesity",31.2,478,"Less than high school",149.136,31.2
+"74","2018","MT","Percent of adults aged 18 years and older who have obesity",26.4,1381,"High school graduate",364.584,26.4
+"75","2018","OH","Percent of adults aged 18 years and older who have obesity",36.7,4297,"High school graduate",1576.999,36.7
+"76","2018","DE","Percent of adults aged 18 years and older who have obesity",34.2,1326,"High school graduate",453.492,34.2
+"77","2018","AK","Percent of adults aged 18 years and older who have obesity",24,945,"College graduate",226.8,24
+"78","2018","SC","Percent of adults aged 18 years and older who have obesity",36.9,995,"Less than high school",367.155,36.9
+"79","2018","US","Percent of adults aged 18 years and older who have obesity",33.1,107339,"High school graduate",35529.209,33.1
+"80","2018","MD","Percent of adults aged 18 years and older who have obesity",35.1,833,"Less than high school",292.383,35.1
+"81","2018","OK","Percent of adults aged 18 years and older who have obesity",34.1,1368,"High school graduate",466.488,34.1
+"82","2018","LA","Percent of adults aged 18 years and older who have obesity",38.2,1188,"Some college or technical school",453.816,38.2
+"83","2018","ND","Percent of adults aged 18 years and older who have obesity",36.1,1652,"Some college or technical school",596.372,36.1
+"84","2018","MN","Percent of adults aged 18 years and older who have obesity",24.3,6577,"College graduate",1598.211,24.3
+"85","2018","MO","Percent of adults aged 18 years and older who have obesity",39.2,1610,"Some college or technical school",631.12,39.2
+"86","2018","MO","Percent of adults aged 18 years and older who have obesity",37.9,463,"Less than high school",175.477,37.9
+"87","2018","PR","Percent of adults aged 18 years and older who have obesity",33.6,1212,"High school graduate",407.232,33.6
+"88","2018","OR","Percent of adults aged 18 years and older who have obesity",31.7,1728,"Some college or technical school",547.776,31.7
+"89","2018","GU","Percent of adults aged 18 years and older who have obesity",30.5,357,"Some college or technical school",108.885,30.5
+"90","2018","CA","Percent of adults aged 18 years and older who have obesity",18.1,4619,"College graduate",836.039,18.1
+"91","2018","MI","Percent of adults aged 18 years and older who have obesity",26.7,3702,"College graduate",988.434,26.7
+"92","2018","MD","Percent of adults aged 18 years and older who have obesity",25.7,7493,"College graduate",1925.701,25.7
+"93","2018","OR","Percent of adults aged 18 years and older who have obesity",24.5,2124,"College graduate",520.38,24.5
+"94","2018","DC","Percent of adults aged 18 years and older who have obesity",16.4,2569,"College graduate",421.316,16.4
+"95","2018","ME","Percent of adults aged 18 years and older who have obesity",32.6,2692,"Some college or technical school",877.592,32.6
+"96","2018","HI","Percent of adults aged 18 years and older who have obesity",19.1,3137,"College graduate",599.167,19.1
+"97","2018","MN","Percent of adults aged 18 years and older who have obesity",33.4,568,"Less than high school",189.712,33.4
+"98","2018","LA","Percent of adults aged 18 years and older who have obesity",29.6,1584,"College graduate",468.864,29.6
+"99","2018","WV","Percent of adults aged 18 years and older who have obesity",36,1354,"College graduate",487.44,36
+"100","2018","PR","Percent of adults aged 18 years and older who have obesity",32.9,1245,"Some college or technical school",409.605,32.9
+"101","2018","OH","Percent of adults aged 18 years and older who have obesity",35.5,3263,"Some college or technical school",1158.365,35.5
+"102","2018","WY","Percent of adults aged 18 years and older who have obesity",30.2,193,"Less than high school",58.286,30.2
+"103","2018","CO","Percent of adults aged 18 years and older who have obesity",29.4,511,"Less than high school",150.234,29.4
+"104","2018","MI","Percent of adults aged 18 years and older who have obesity",36,2962,"Some college or technical school",1066.32,36
+"105","2018","IN","Percent of adults aged 18 years and older who have obesity",36.6,2337,"High school graduate",855.342,36.6
+"106","2018","KS","Percent of adults aged 18 years and older who have obesity",37.4,2962,"Some college or technical school",1107.788,37.4
+"107","2018","TN","Percent of adults aged 18 years and older who have obesity",29,1579,"College graduate",457.91,29
+"108","2018","VI","Percent of adults aged 18 years and older who have obesity",NA,NA,"High school graduate",NA,NA
+"109","2018","KS","Percent of adults aged 18 years and older who have obesity",37.3,2581,"High school graduate",962.713,37.3
+"110","2018","PA","Percent of adults aged 18 years and older who have obesity",35.6,1334,"Some college or technical school",474.904,35.6
+"111","2018","AL","Percent of adults aged 18 years and older who have obesity",39.2,1725,"Some college or technical school",676.2,39.2
+"112","2018","NJ","Percent of adults aged 18 years and older who have obesity",20.1,1270,"College graduate",255.27,20.1
+"113","2018","AZ","Percent of adults aged 18 years and older who have obesity",31.1,1852,"High school graduate",575.972,31.1
+"114","2018","CA","Percent of adults aged 18 years and older who have obesity",34.4,1404,"Less than high school",482.976,34.4
+"115","2018","RI","Percent of adults aged 18 years and older who have obesity",22.5,2218,"College graduate",499.05,22.5
+"116","2018","MS","Percent of adults aged 18 years and older who have obesity",38.4,697,"Less than high school",267.648,38.4
+"117","2018","VA","Percent of adults aged 18 years and older who have obesity",25.2,4093,"College graduate",1031.436,25.2
+"118","2018","OK","Percent of adults aged 18 years and older who have obesity",37.4,1517,"Some college or technical school",567.358,37.4
+"119","2018","NC","Percent of adults aged 18 years and older who have obesity",32.5,1073,"High school graduate",348.725,32.5
+"120","2018","AR","Percent of adults aged 18 years and older who have obesity",40.5,1273,"Some college or technical school",515.565,40.5
+"121","2018","MA","Percent of adults aged 18 years and older who have obesity",29.4,1133,"High school graduate",333.102,29.4
+"122","2018","NH","Percent of adults aged 18 years and older who have obesity",42,234,"Less than high school",98.28,42
+"123","2018","NE","Percent of adults aged 18 years and older who have obesity",29.5,4218,"College graduate",1244.31,29.5
+"124","2018","TX","Percent of adults aged 18 years and older who have obesity",36.1,2429,"High school graduate",876.869,36.1
+"125","2018","NC","Percent of adults aged 18 years and older who have obesity",38.2,1235,"Some college or technical school",471.77,38.2
+"126","2018","TX","Percent of adults aged 18 years and older who have obesity",39.6,1007,"Less than high school",398.772,39.6
+"127","2018","MT","Percent of adults aged 18 years and older who have obesity",28.5,1466,"Some college or technical school",417.81,28.5
+"128","2018","MS","Percent of adults aged 18 years and older who have obesity",35.9,1485,"College graduate",533.115,35.9
+"129","2018","NM","Percent of adults aged 18 years and older who have obesity",34.3,1679,"High school graduate",575.897,34.3
+"130","2018","CT","Percent of adults aged 18 years and older who have obesity",22.9,4625,"College graduate",1059.125,22.9
+"131","2018","IL","Percent of adults aged 18 years and older who have obesity",36.7,382,"Less than high school",140.194,36.7
+"132","2018","HI","Percent of adults aged 18 years and older who have obesity",28,314,"Less than high school",87.92,28
+"133","2018","GU","Percent of adults aged 18 years and older who have obesity",33.5,529,"High school graduate",177.215,33.5
+"134","2018","LA","Percent of adults aged 18 years and older who have obesity",40.4,1498,"High school graduate",605.192,40.4
+"135","2018","MO","Percent of adults aged 18 years and older who have obesity",34.3,1845,"High school graduate",632.835,34.3
+"136","2018","IN","Percent of adults aged 18 years and older who have obesity",34.2,1778,"Some college or technical school",608.076,34.2
+"137","2018","KY","Percent of adults aged 18 years and older who have obesity",36.6,2330,"Some college or technical school",852.78,36.6
+"138","2018","WI","Percent of adults aged 18 years and older who have obesity",25.2,1635,"College graduate",412.02,25.2
+"139","2018","FL","Percent of adults aged 18 years and older who have obesity",31,4165,"Some college or technical school",1291.15,31
+"140","2018","IA","Percent of adults aged 18 years and older who have obesity",29.2,2800,"College graduate",817.6,29.2
+"141","2018","CT","Percent of adults aged 18 years and older who have obesity",30.5,2269,"High school graduate",692.045,30.5
+"142","2018","OR","Percent of adults aged 18 years and older who have obesity",31.3,1290,"High school graduate",403.77,31.3
+"143","2018","WI","Percent of adults aged 18 years and older who have obesity",30.2,224,"Less than high school",67.648,30.2
+"144","2018","VI","Percent of adults aged 18 years and older who have obesity",NA,NA,"Some college or technical school",NA,NA
+"145","2018","US","Percent of adults aged 18 years and older who have obesity",35,27552,"Less than high school",9643.2,35
+"146","2018","ND","Percent of adults aged 18 years and older who have obesity",31.2,1880,"College graduate",586.56,31.2
+"147","2018","DE","Percent of adults aged 18 years and older who have obesity",35.8,1249,"Some college or technical school",447.142,35.8
+"148","2018","UT","Percent of adults aged 18 years and older who have obesity",31.2,2429,"High school graduate",757.848,31.2
+"149","2018","NY","Percent of adults aged 18 years and older who have obesity",31.6,2338,"Less than high school",738.808,31.6
+"150","2018","NH","Percent of adults aged 18 years and older who have obesity",22.3,2276,"College graduate",507.548,22.3
+"151","2018","KS","Percent of adults aged 18 years and older who have obesity",32.4,485,"Less than high school",157.14,32.4
+"152","2018","NE","Percent of adults aged 18 years and older who have obesity",35.1,4256,"Some college or technical school",1493.856,35.1
+"153","2018","AL","Percent of adults aged 18 years and older who have obesity",29.4,1906,"College graduate",560.364,29.4
+"154","2018","NJ","Percent of adults aged 18 years and older who have obesity",26.6,140,"Less than high school",37.24,26.6
+"155","2018","MA","Percent of adults aged 18 years and older who have obesity",29,282,"Less than high school",81.78,29
+"156","2018","DC","Percent of adults aged 18 years and older who have obesity",30.3,601,"Some college or technical school",182.103,30.3
+"157","2018","IA","Percent of adults aged 18 years and older who have obesity",38.4,444,"Less than high school",170.496,38.4
+"158","2018","GA","Percent of adults aged 18 years and older who have obesity",26.2,3182,"College graduate",833.684,26.2
+"159","2018","WV","Percent of adults aged 18 years and older who have obesity",39.2,1196,"Some college or technical school",468.832,39.2
+"160","2018","PA","Percent of adults aged 18 years and older who have obesity",26.3,2379,"College graduate",625.677,26.3
+"161","2018","WY","Percent of adults aged 18 years and older who have obesity",26.2,1189,"High school graduate",311.518,26.2
+"162","2018","AZ","Percent of adults aged 18 years and older who have obesity",38.4,508,"Less than high school",195.072,38.4
+"163","2018","OH","Percent of adults aged 18 years and older who have obesity",32.2,811,"Less than high school",261.142,32.2
+"164","2018","WA","Percent of adults aged 18 years and older who have obesity",31.8,2600,"High school graduate",826.8,31.8
+"165","2018","VT","Percent of adults aged 18 years and older who have obesity",27.4,1393,"Some college or technical school",381.682,27.4
+"166","2018","SC","Percent of adults aged 18 years and older who have obesity",29.3,3327,"College graduate",974.811,29.3
+"167","2018","VA","Percent of adults aged 18 years and older who have obesity",33.1,2438,"Some college or technical school",806.978,33.1
+"168","2018","TN","Percent of adults aged 18 years and older who have obesity",34.6,448,"Less than high school",155.008,34.6
+"169","2018","ME","Percent of adults aged 18 years and older who have obesity",23.5,4026,"College graduate",946.11,23.5
+"170","2018","IN","Percent of adults aged 18 years and older who have obesity",30.2,2218,"College graduate",669.836,30.2
+"171","2018","AL","Percent of adults aged 18 years and older who have obesity",39.2,649,"Less than high school",254.408,39.2
+"172","2018","PA","Percent of adults aged 18 years and older who have obesity",26.9,313,"Less than high school",84.197,26.9
+"173","2018","OR","Percent of adults aged 18 years and older who have obesity",35.5,320,"Less than high school",113.6,35.5
+"174","2018","WI","Percent of adults aged 18 years and older who have obesity",35.4,1422,"High school graduate",503.388,35.4
+"175","2018","SD","Percent of adults aged 18 years and older who have obesity",28.5,2279,"College graduate",649.515,28.5
+"176","2018","ID","Percent of adults aged 18 years and older who have obesity",33.3,1037,"Some college or technical school",345.321,33.3
+"177","2018","NM","Percent of adults aged 18 years and older who have obesity",32.5,1639,"Some college or technical school",532.675,32.5
+"178","2018","ME","Percent of adults aged 18 years and older who have obesity",34.6,532,"Less than high school",184.072,34.6
+"179","2018","MS","Percent of adults aged 18 years and older who have obesity",40.8,1626,"Some college or technical school",663.408,40.8
+"180","2018","VT","Percent of adults aged 18 years and older who have obesity",19.4,2742,"College graduate",531.948,19.4
+"181","2018","AR","Percent of adults aged 18 years and older who have obesity",36.4,486,"Less than high school",176.904,36.4
+"182","2018","LA","Percent of adults aged 18 years and older who have obesity",36,442,"Less than high school",159.12,36
+"183","2018","MN","Percent of adults aged 18 years and older who have obesity",32.8,3716,"High school graduate",1218.848,32.8
+"184","2018","NV","Percent of adults aged 18 years and older who have obesity",25.6,786,"High school graduate",201.216,25.6
+"185","2018","VI","Percent of adults aged 18 years and older who have obesity",NA,NA,"College graduate",NA,NA
+"186","2018","AK","Percent of adults aged 18 years and older who have obesity",31.8,751,"Some college or technical school",238.818,31.8
+"187","2018","DC","Percent of adults aged 18 years and older who have obesity",35.8,669,"High school graduate",239.502,35.8
+"188","2018","SD","Percent of adults aged 18 years and older who have obesity",30.5,386,"Less than high school",117.73,30.5
+"189","2018","MA","Percent of adults aged 18 years and older who have obesity",20.9,3270,"College graduate",683.43,20.9
+"190","2018","WV","Percent of adults aged 18 years and older who have obesity",40.7,1623,"High school graduate",660.561,40.7
+"191","2018","FL","Percent of adults aged 18 years and older who have obesity",31.9,4160,"High school graduate",1327.04,31.9
+"192","2018","ND","Percent of adults aged 18 years and older who have obesity",33.4,263,"Less than high school",87.842,33.4
+"193","2018","GA","Percent of adults aged 18 years and older who have obesity",33.9,2155,"Some college or technical school",730.545,33.9
+"194","2018","MO","Percent of adults aged 18 years and older who have obesity",29.3,1873,"College graduate",548.789,29.3
+"195","2018","WA","Percent of adults aged 18 years and older who have obesity",32.7,3646,"Some college or technical school",1192.242,32.7
+"196","2018","NV","Percent of adults aged 18 years and older who have obesity",33.9,965,"Some college or technical school",327.135,33.9
+"197","2018","NH","Percent of adults aged 18 years and older who have obesity",30.5,1294,"Some college or technical school",394.67,30.5
+"198","2018","NE","Percent of adults aged 18 years and older who have obesity",36.1,4324,"High school graduate",1560.964,36.1
+"199","2018","AZ","Percent of adults aged 18 years and older who have obesity",23.5,2713,"College graduate",637.555,23.5
+"200","2018","VA","Percent of adults aged 18 years and older who have obesity",32.8,2324,"High school graduate",762.272,32.8
+"201","2018","DC","Percent of adults aged 18 years and older who have obesity",39.5,227,"Less than high school",89.665,39.5
+"202","2018","US","Percent of adults aged 18 years and older who have obesity",24.7,150949,"College graduate",37284.403,24.7
+"203","2018","CO","Percent of adults aged 18 years and older who have obesity",25.5,2157,"Some college or technical school",550.035,25.5
+"204","2018","NY","Percent of adults aged 18 years and older who have obesity",22.1,12240,"College graduate",2705.04,22.1
+"205","2018","MI","Percent of adults aged 18 years and older who have obesity",34.9,449,"Less than high school",156.701,34.9
+"206","2018","TN","Percent of adults aged 18 years and older who have obesity",37.5,1469,"High school graduate",550.875,37.5
+"207","2018","GU","Percent of adults aged 18 years and older who have obesity",30.8,132,"Less than high school",40.656,30.8
+"208","2018","CO","Percent of adults aged 18 years and older who have obesity",17.7,3824,"College graduate",676.848,17.7
+"209","2018","MT","Percent of adults aged 18 years and older who have obesity",25.8,1649,"College graduate",425.442,25.8
+"210","2018","TX","Percent of adults aged 18 years and older who have obesity",29.2,3942,"College graduate",1151.064,29.2
+"211","2018","NJ","Percent of adults aged 18 years and older who have obesity",31.1,677,"High school graduate",210.547,31.1
+"212","2018","IL","Percent of adults aged 18 years and older who have obesity",25.1,2131,"College graduate",534.881,25.1
+"213","2018","DE","Percent of adults aged 18 years and older who have obesity",27.6,1686,"College graduate",465.336,27.6
+"214","2018","HI","Percent of adults aged 18 years and older who have obesity",31.1,1910,"High school graduate",594.01,31.1
+"215","2018","RI","Percent of adults aged 18 years and older who have obesity",30.7,1235,"High school graduate",379.145,30.7
+"216","2018","ID","Percent of adults aged 18 years and older who have obesity",24.8,924,"High school graduate",229.152,24.8
+"217","2018","SC","Percent of adults aged 18 years and older who have obesity",34.7,2768,"Some college or technical school",960.496,34.7
+"218","2018","WY","Percent of adults aged 18 years and older who have obesity",33.9,1369,"Some college or technical school",464.091,33.9
+"219","2018","DE","Percent of adults aged 18 years and older who have obesity",42.1,351,"Less than high school",147.771,42.1
+"220","2018","UT","Percent of adults aged 18 years and older who have obesity",24.5,3808,"College graduate",932.96,24.5
