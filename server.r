@@ -55,9 +55,9 @@ function(input, output, session) {
   
   usaState2018Merge <- left_join(obeseTotalState2018, stateCodes)
   
-  output$myHeatMap <- renderLeaflet({
+  output$myHeatMap  <- renderLeaflet({
     
-pal <- colorNumeric("YlOrRd", NULL)
+      pal <- colorNumeric("YlOrRd", NULL)
 
       leaflet(usaStates)  
       setView(-96, 37.8, 4) %>%
