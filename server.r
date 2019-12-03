@@ -2,6 +2,8 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
+obesityIncomeTotals <- read.csv(obesityIncomeTotals)
+
 #source each individual R script for each tab 
 
 source("obesityHeatMap.r")

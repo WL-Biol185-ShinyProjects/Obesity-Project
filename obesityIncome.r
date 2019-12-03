@@ -1,3 +1,5 @@
+source(obesityIncomeData.r)
+
 obesityIncomeTab <- list(
     
   titlePanel("Income & Obesity in the United States"),
