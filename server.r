@@ -5,7 +5,7 @@ library(tidyverse)
 
 #call csv data files
 
-obesityIncomeTotals <- read.csv(obesityIncomeTotals.csv)
+obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
 
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
 
