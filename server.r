@@ -2,8 +2,10 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
+
 #call csv data files
 
+obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
 obeseTotal <- read.csv("obeseTotal.csv")
 
@@ -29,7 +31,7 @@ function(input, output, session) {
   })
   
   output$myLineGraph <- renderPlot({
-    obeseTotal                                     %>%
+    obeseTotal                                %>%
       filter(
         yearNum     %in% input$yearInput,
         state       %in% input$state)         %>%     
@@ -111,13 +113,13 @@ function(input, output, session) {
   output$densPlotEdu <- renderPlot({
     
     
-    obesityEducationTotals                 %>%
+    obesityEducationTotals                              %>%
       filter(
         educationLevel %in% input$educationInputDens,
-        location       %in% input$locationDens)                                    %>%
+        location       %in% input$locationDens)         %>%
       ggplot(aes(obesePercent, fill = educationLevel)) + geom_density(alpha = 0.312) +
-      ylab("Density")                                                   +
-      xlab("% Obese")                                                   +
+      xlab("% Obese")                                                                +
+      ylab("Density")                                                                +
       labs(fill = "Education Level")
     
   })
@@ -136,12 +138,29 @@ function(input, output, session) {
       filter(incomeLevel %in% input$incomeLevel)  %>%
       filter(location    %in% input$includeLocation)     %>%
       ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
-      geom_col(position = "dodge", alpha = 0.5)               + 
+      geom_col(position = "dodge", alpha = 0.7)               + 
       xlab("Income Level")                                    + 
       ylab("% Obese")
     
   })
   
-
+  output$stateResult3Dens <- renderText({
+    
+    paste(input$includeLocationDens, collapse = ", ")
+    
+  })
+  
+  output$myIncomeDensity <- renderPlot({
+    
+    obesityIncomeTotals                               %>%
+      filter(incomeLevel %in% input$incomeLevelDens)  %>%
+      filter(location %in% input$includeLocationDens) %>%
+      ggplot(aes(obesePercent, fill = incomeLevel)) + geom_density(alpha = 0.312) +
+      xlab("% Obese")                                                             +
+      ylab("Density")                                                             +
+      labs(fill = "Income Level")
+    
+  })
   
 }
+
