@@ -20,7 +20,9 @@ colnames (obesityGeneralYears) [3]  <- "question"
 colnames (obesityGeneralYears) [4]  <- "percent" 
 colnames (obesityGeneralYears) [5]  <- "sampleSize"
 
-obesityGeneralYearsPercent <- obesityGeneralYears %>% #taking of N/A from percent column 
+#taking of N/A from percent column
+
+obesityGeneralYearsPercent <- obesityGeneralYears %>% 
   filter(percent != "N/A")
 
 obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state) #made state a factor
@@ -30,7 +32,7 @@ obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
 
 obeseTotal <- obesityGeneralYearsPercent %>%
   group_by(state, year) %>%
-  summarize(percentObese = sum(percent*Sample_Size)/(sum(Sample_Size)))
+  summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
 
 

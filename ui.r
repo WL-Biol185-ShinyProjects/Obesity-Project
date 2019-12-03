@@ -3,13 +3,18 @@ library(shinydashboard)
 library(leaflet)
 library(ggplot2)
 library(rgdal)
+library(dplyr)
 library(dbplyr)
 library(tidyverse)
 library(sp)
 
 #call csv data files
 
+#obesityData <- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
+obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
+obeseTotal <- read.csv("obeseTotal.csv")
+
 
 #source each tab into the general ui.r
 

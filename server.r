@@ -2,9 +2,12 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
+
 #call csv data files
 
+obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
+obeseTotal <- read.csv("obeseTotal.csv")
 
 #source each individual R script for each tab 
 
@@ -28,7 +31,7 @@ function(input, output, session) {
   })
   
   output$myLineGraph <- renderPlot({
-    obeseTotal                                     %>%
+    obeseTotal                                %>%
       filter(
         yearNum     %in% input$yearInput,
         state       %in% input$state)         %>%     
@@ -59,17 +62,17 @@ function(input, output, session) {
   
   usaState2018Merge <- left_join(obeseTotalState2018, stateCodes)
   
-  output$myHeatMap <- renderLeaflet({
+  output$myHeatMap  <- renderLeaflet({
     
-pal <- colorNumeric("viridis", NULL)
+      pal <- colorNumeric("YlOrRd", NULL)
 
-      leaflet(usaStates)    %>%
+      leaflet(usaStates)  
       setView(-96, 37.8, 4) %>%
       addTiles()            %>%
-      addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 1,
-               fillColor = ~pal(usaState2018Merge$percentObese),
-               label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, big.mark = ","))) %>%
-               addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.7)
+      addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
+              fillColor = ~pal(usaState2018Merge$percentObese),
+              label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, "%"))) %>%
+              addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.8)
     
   })
 
@@ -110,13 +113,13 @@ pal <- colorNumeric("viridis", NULL)
   output$densPlotEdu <- renderPlot({
     
     
-    obesityEducationTotals                 %>%
+    obesityEducationTotals                              %>%
       filter(
         educationLevel %in% input$educationInputDens,
-        location       %in% input$locationDens)                                    %>%
+        location       %in% input$locationDens)         %>%
       ggplot(aes(obesePercent, fill = educationLevel)) + geom_density(alpha = 0.312) +
-      ylab("Density")                                                   +
-      xlab("% Obese")                                                   +
+      xlab("% Obese")                                                                +
+      ylab("Density")                                                                +
       labs(fill = "Education Level")
     
   })
@@ -135,12 +138,29 @@ pal <- colorNumeric("viridis", NULL)
       filter(incomeLevel %in% input$incomeLevel)  %>%
       filter(location    %in% input$includeLocation)     %>%
       ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
-      geom_col(position = "dodge", alpha = 0.5)               + 
+      geom_col(position = "dodge", alpha = 0.7)               + 
       xlab("Income Level")                                    + 
       ylab("% Obese")
     
   })
   
-
+  output$stateResult3Dens <- renderText({
+    
+    paste(input$includeLocationDens, collapse = ", ")
+    
+  })
+  
+  output$myIncomeDensity <- renderPlot({
+    
+    obesityIncomeTotals                               %>%
+      filter(incomeLevel %in% input$incomeLevelDens)  %>%
+      filter(location %in% input$includeLocationDens) %>%
+      ggplot(aes(obesePercent, fill = incomeLevel)) + geom_density(alpha = 0.312) +
+      xlab("% Obese")                                                             +
+      ylab("Density")                                                             +
+      labs(fill = "Income Level")
+    
+  })
   
 }
+
