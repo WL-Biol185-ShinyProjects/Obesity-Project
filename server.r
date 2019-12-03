@@ -44,22 +44,22 @@ function(input, output, session) {
     
   })
   
-  usaStates      <- rgdal::readOGR("states.geo.json")
-  stateCodes     <- read.csv("states.csv")
-  
-  output$myHeatMap  <- renderLeaflet({
-    
+usaStates      <- rgdal::readOGR("states.geo.json")
+stateCodes     <- read.csv("states.csv")
+ 
+   output$myHeatMap  <- renderLeaflet({
+   
       pal <- colorNumeric("YlOrRd", NULL)
-
-      leaflet(usaStates)  
+   
+       leaflet(usaStates)  
       setView(-96, 37.8, 4) %>%
-      addTiles()            %>%
-      addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
-              fillColor = ~pal(usaState2018Merge$percentObese),
+       addTiles()            %>%
+       addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
+               fillColor = ~pal(usaState2018Merge$percentObese),
               label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, "%"))) %>%
-              addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.8)
-    
-  })
+               addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.8)
+     
+   })
 
  output$stateResult <- renderText({
     
