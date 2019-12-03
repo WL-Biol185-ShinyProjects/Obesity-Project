@@ -10,10 +10,10 @@ library(sp)
 
 #call csv data files
 
-#obesityData <- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
 obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
 obeseTotal <- read.csv("obeseTotal.csv")
+usaState2018Merge <- read.csv("usaState2018Merge.csv")
 
 
 #source each tab into the general ui.r
