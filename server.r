@@ -2,6 +2,10 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
+#call csv data files
+
+obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
+
 #source each individual R script for each tab 
 
 source("obesityHeatMap.r")
