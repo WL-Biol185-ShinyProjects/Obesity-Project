@@ -32,4 +32,4 @@ obesityEducationTotals <- obesityEducationData                       %>%
   mutate(
     obesePercent = ((numberObese/sampleSize)*100))
 
-write.table(obesityEducationTotals)
+write.csv(obesityEducationTotals, "obesityEducationTotals.csv")

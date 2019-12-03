@@ -7,7 +7,9 @@ library(dbplyr)
 library(tidyverse)
 library(sp)
 
-#obesityData <- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
+#call csv data files
+
+obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
 
 #source each tab into the general ui.r
 
