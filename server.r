@@ -16,6 +16,9 @@ source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
 
+usaStates      <- rgdal::readOGR("states.geo.json")
+stateCodes     <- read.csv("states.csv")
+
 function(input, output, session) {
   
   
@@ -44,8 +47,6 @@ function(input, output, session) {
     
   })
   
-  usaStates      <- rgdal::readOGR("states.geo.json")
-  stateCodes     <- read.csv("states.csv")
   
   output$myHeatMap  <- renderLeaflet({
     
@@ -67,7 +68,8 @@ function(input, output, session) {
     
   })
   
-  output$checkEdu <- renderText({
+ #do we need this if we are not printing what education levels are chosen? 
+ output$checkEdu <- renderText({
     
     educationInput <- paste(input$educationInput, collapse = ", ")
     paste(educationInput)
@@ -116,11 +118,19 @@ function(input, output, session) {
     
   })
   
+  #do we need this if we are not printing what income levels are chosen?
+  output$checkIncome <- renderText({
+    
+    incomeInput <- paste(input$incomeInput, collapse = ", ")
+    paste(incomeInput)
+    
+  })
+  
   
   output$myIncomeGraph <- renderPlot({
     
     obesityIncomeTotals                           %>%
-      filter(incomeLevel %in% input$incomeLevel)  %>%
+      filter(incomeLevel %in% input$incomeInput)  %>%
       filter(location    %in% input$includeLocation)     %>%
       ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
       geom_col(position = "dodge", alpha = 0.7)               + 
@@ -138,7 +148,7 @@ function(input, output, session) {
   output$myIncomeDensity <- renderPlot({
     
     obesityIncomeTotals                               %>%
-      filter(incomeLevel %in% input$incomeLevelDens)  %>%
+      filter(incomeLevel %in% input$incomeInputDens)  %>%
       filter(location %in% input$includeLocationDens) %>%
       ggplot(aes(obesePercent, fill = incomeLevel)) + geom_density(alpha = 0.312) +
       xlab("% Obese")                                                             +
