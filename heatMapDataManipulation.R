@@ -13,11 +13,9 @@ obeseTotalState2018 <- obeseTotal2018 %>%
                                        "TN", "TX", "UT", "VT", "VA", "WA",
                                        "WV", "WI", "WY" ))
 
-colnames (obeseTotalState2018) [2] <- "Abbreviation"
-colnames (obeseTotalState2018) [1] <- "Number"
+colnames (obeseTotalState2018) [1] <- "Abbreviation"
 
 
 usaState2018Merge <- left_join(obeseTotalState2018, stateCodes)
 
 write.csv(usaState2018Merge, "usaState2018Merge.csv")
-
