@@ -51,7 +51,7 @@ function(input, output, session) {
     
       pal <- colorNumeric("YlOrRd", NULL)
 
-      leaflet(usaStates)  
+      leaflet(usaStates)    %>%
       setView(-96, 37.8, 4) %>%
       addTiles()            %>%
       addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
