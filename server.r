@@ -2,15 +2,14 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
-usaStates      <- rgdal::readOGR("states.geo.json")
-stateCodes     <- read.csv("states.csv")
-
 #call csv data files
 
-obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
+obesityIncomeTotals    <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
-obeseTotal <- read.csv("obeseTotal.csv")
-usaState2018Merge <- read.csv("usaState2018Merge.csv")
+obeseTotal             <- read.csv("obeseTotal.csv")
+usaState2018Merge      <- read.csv("usaState2018Merge.csv")
+stateCodes             <- read.csv("states.csv")
+usaStates              <- rgdal::readOGR("states.geo.json")
 
 #source each individual R script for each tab 
 
