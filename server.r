@@ -5,7 +5,6 @@ library(tidyverse)
 usaStates      <- rgdal::readOGR("states.geo.json")
 stateCodes     <- read.csv("states.csv")
 
-
 #call csv data files
 
 obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
