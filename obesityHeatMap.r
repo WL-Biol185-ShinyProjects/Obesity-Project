@@ -34,17 +34,13 @@ obesityHeatTab <- list(
                   "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
                   "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                 ),
-                selected = list(
-                  "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
-                  "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
-                  "ME", "MI", "MN", "WA", "WI", "WV", "WY"
-                ),
+                selected = "AK",
                 selectize = TRUE,
-                multiple  = TRUE
+                multiple  = FALSE
                 
     ),
     textOutput("stateResult2") 
     ),
     mainPanel(plotOutput("myLineGraph"))
   )
-  ) 
+)
