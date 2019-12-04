@@ -5,7 +5,7 @@ library(ggplot2)
 library(rgdal)
 library(dplyr)
 library(tidyverse)
-library(sp)
+#library(sp)
 
 #call csv data files
 

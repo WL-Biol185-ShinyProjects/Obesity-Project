@@ -2,6 +2,9 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
+usaStates      <- rgdal::readOGR("states.geo.json")
+stateCodes     <- read.csv("states.csv")
+
 
 #call csv data files
 
@@ -43,9 +46,7 @@ function(input, output, session) {
       ylab("Percent Obese")                
     
   })
-  
-usaStates      <- rgdal::readOGR("states.geo.json")
-stateCodes     <- read.csv("states.csv")
+
  
    output$myHeatMap  <- renderLeaflet({
    
