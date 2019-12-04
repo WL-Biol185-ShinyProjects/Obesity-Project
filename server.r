@@ -51,13 +51,27 @@ stateCodes     <- read.csv("states.csv")
    
       pal <- colorNumeric("YlOrRd", NULL)
    
-      leaflet(usaStates)     %>%
-      setView(-96, 37.8, 4)  %>%
-       addTiles()            %>%
-       addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
-               fillColor = ~pal(usaState2018Merge$percentObese),
-              label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, "%"))) %>%
-               addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.8)
+      leaflet(usaStates)       %>%
+        setView(-96, 37.8, 4)  %>%
+        addTiles()             %>%
+        addPolygons(stroke = FALSE, 
+                    smoothFactor = 0.3,
+                    fillOpacity  = 0.7,
+                    opacity = 1,
+                    dashArray = "3",
+                    weight = 2,
+                    color = "white",
+                    fillColor    = ~pal(usaState2018Merge$percentObese),
+                    label        = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese)),
+                    highlightOptions = highlightOptions(color = "white",
+                                                        fillOpacity = 2,
+                                                        bringToFront = TRUE)) %>%
+        addLegend("bottomright",
+                  pal          = pal, 
+                  values       = ~(usaState2018Merge$percentObese), 
+                  opacity      = 0.8, 
+                  title        = "Percent Obese",
+                  labFormat    = labelFormat(suffix = "%"))
      
    })
 
