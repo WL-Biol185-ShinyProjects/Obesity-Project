@@ -2,7 +2,7 @@ obesityEducationTab <- list(
   
   titlePanel("Education & Obesity in the United States"),
   
-  fluidRow(box(width = 12, background = "black", p("The graph below shows..."))),
+  fluidRow(box(width = 12, background = "navy", p("The graph below shows..."))),
   
    sidebarLayout(
     sidebarPanel(
@@ -36,7 +36,7 @@ obesityEducationTab <- list(
     )
   ),
 
-  fluidRow(box(width = 12, background = "black", p("The graph below shows..."))),
+  fluidRow(box(width = 12, background = "navy", p("The graph below shows..."))),
    
   sidebarLayout(
     sidebarPanel(

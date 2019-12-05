@@ -2,7 +2,7 @@ obesityIncomeTab <- list(
     
   titlePanel("Income & Obesity in the United States"),
   
-  fluidRow(box(width = 12, background = "black", p("This bar graph shows the correlation between average state income and percent of obesity in the state populace."))),
+  fluidRow(box(width = 12, background = "navy", p("This bar graph shows the correlation between average state income and percent of obesity in the state populace."))),
   
     sidebarLayout(
       sidebarPanel(
@@ -39,7 +39,7 @@ obesityIncomeTab <- list(
       mainPanel(plotOutput("myIncomeGraph"))
     ),
   
-  fluidRow(box(width = 12, background = "black", p("The graph below shows..."))),
+  fluidRow(box(width = 12, background = "navy", p("The graph below shows..."))),
   
   sidebarLayout(
     sidebarPanel(

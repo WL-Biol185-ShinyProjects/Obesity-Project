@@ -2,11 +2,11 @@ obesityHeatTab <- list(
   
   titlePanel("Obesity in the United States"),
   
-  fluidRow(box(width = 12, background = "black", p("This is a map of the United States detailing obesity in 2018"))),
+  fluidRow(box(width = 12, background = "navy", p("This is a map of the United States detailing obesity in 2018"))),
   
   fluidRow(leafletOutput("myHeatMap")),
   
-  fluidRow(box(width = 12, background = "black", p("The plot below shows an overview of obesity in the United States from 2009-2018"))),
+  fluidRow(box(width = 12, background = "navy", p("The plot below shows an overview of obesity in the United States from 2009-2018"))),
   
   sidebarLayout(
   
