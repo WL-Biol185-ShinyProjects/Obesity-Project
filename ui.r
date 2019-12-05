@@ -23,6 +23,7 @@ source("obesityIncome.r"  )
 
 fluidPage(
   dashboardPage(
+                skin= "black",
     dashboardHeader(title="Obesity in the USA"),
     dashboardSidebar(
       sidebarMenu(
