@@ -7,7 +7,7 @@ obesityIncomeTab <- list(
     sidebarLayout(
       sidebarPanel(
         checkboxGroupInput(
-          "incomeLevel", "Choose Income Level:",
+          "incomeInput", "Choose Income Level:",
           choices = list(
             "Less than $15,000"   = "Less than $15,000",
             "$15,000 - $24,999"   = "$15,000 - $24,999",
@@ -44,7 +44,7 @@ obesityIncomeTab <- list(
   sidebarLayout(
     sidebarPanel(
       checkboxGroupInput(
-        "incomeLevelDens", "Choose Income Level:",
+        "incomeInputDens", "Choose Income Level:",
         choices = list(
           "Less than $15,000"   = "Less than $15,000",
           "$15,000 - $24,999"   = "$15,000 - $24,999",
