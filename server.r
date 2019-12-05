@@ -42,7 +42,7 @@ function(input, output, session) {
         ggplot(aes(yearNum, percentObese, color = State)) + 
         geom_line()                                      + 
         xlab("Year")                                     + 
-        ylab("Percent Obese")
+        ylab("% Obese")
       }
 )
 
