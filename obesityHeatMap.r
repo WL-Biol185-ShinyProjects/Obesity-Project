@@ -2,11 +2,11 @@ obesityHeatTab <- list(
   
   titlePanel("Obesity in the United States"),
   
-  fluidRow(box(width = 12, background = "navy", p("This is a map of the United States detailing obesity in 2018"))),
+  fluidRow(box(width = 12, background = "navy", p("The map below shows the varying levels of obesity in the United States in 2018"))),
   
   fluidRow(leafletOutput("myHeatMap")),
   
-  fluidRow(box(width = 12, background = "navy", p("The plot below shows an overview of obesity in the United States from 2009-2018"))),
+  fluidRow(box(width = 12, background = "navy", p("The line graph below demonstrates the obesity trends in each state from 2011-2018"))),
   
   sidebarLayout(
   
@@ -25,8 +25,8 @@ obesityHeatTab <- list(
         inline = TRUE),
 
     
-    selectInput(inputId = "state",
-                label = "Choose States:",
+    selectInput(inputId = "State",
+                label = "Choose a State:",
                 choices = list(
                   "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
                   "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
