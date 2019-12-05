@@ -3,7 +3,7 @@ obesityEducationTab <- list(
   titlePanel("Education & Obesity in the United States"),
   
   fluidRow(box(width = 12, background = "navy", p("The bar graph below shows distribution of education level among obese individuals. Compare obesity percentages by state and education level:"))),
-  
+
    sidebarLayout(
     sidebarPanel(
     checkboxGroupInput(

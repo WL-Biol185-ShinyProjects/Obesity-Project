@@ -31,15 +31,15 @@ function(input, output, session) {
       paste(yearInput)
     }
 )
-  
+
   output$myLineGraph <- renderPlot(
     {
       obeseTotal                        %>%
         filter(
           yearNum %in% input$yearInput,
-          state   %in% input$state
+          State   %in% input$State
           )                             %>%
-        ggplot(aes(yearNum, percentObese, color = state)) + 
+        ggplot(aes(yearNum, percentObese, color = State)) + 
         geom_line()                                      + 
         xlab("Year")                                     + 
         ylab("Percent Obese")
