@@ -9,10 +9,10 @@ library(tidyverse)
 
 #call csv data files
 
-obesityIncomeTotals <- read.csv("obesityIncomeTotals.csv")
+obesityIncomeTotals    <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
-obeseTotal <- read.csv("obeseTotal.csv")
-usaState2018Merge <- read.csv("usaState2018Merge.csv")
+obeseTotal             <- read.csv("obeseTotal.csv")
+usaState2018Merge      <- read.csv("usaState2018Merge.csv")
 
 
 #source each tab into the general ui.r
