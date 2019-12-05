@@ -1,10 +1,10 @@
 obesityIncomeTab <- list(
-  
+
   titlePanel("Income & Obesity in the United States"),
   fluidRow(box(
                width      = 12,
-               background = "black",
-               p("This bar graph shows the correlation between average state income and percent of obesity in the state populace.")
+               background = "navy",
+               p("The bar graph below depicts the correlation between average state income and percent of obesity across various state populations.")
                )
            ),
   sidebarLayout(
@@ -33,7 +33,7 @@ obesityIncomeTab <- list(
                       ),
                     selectize = TRUE,
                     multiple  = TRUE,
-                    selected  = c("VA", "WA")
+                    selected  = c("DC", "WA","MS")
                     ),
         textOutput("stateResult3")
       ),
@@ -41,9 +41,9 @@ obesityIncomeTab <- list(
     ),
 
   fluidRow(box(
-               width      = 12,
-               background = "black",
-               p("The graph below shows...")
+               width      = 12, 
+               background = "navy", 
+               p("The density plot below depicts the frequency of each obesity percentage by income level.")
                )
            ),
 
@@ -76,7 +76,7 @@ obesityIncomeTab <- list(
                   ),
                   selectize = TRUE,
                   multiple = TRUE,
-                  selected = c("VA", "WA")
+                  selected = c("DC", "WA", "MS")
       ),
       textOutput("stateResult3Dens")
     ),
