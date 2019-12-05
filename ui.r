@@ -6,6 +6,8 @@ library(rgdal)
 library(dplyr)
 library(tidyverse)
 
+shiny::tags
+
 #call csv data files
 obesityIncomeTotals    <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
@@ -19,7 +21,9 @@ source("obesityIncome.r")
 
 fluidPage(
   dashboardPage(skin = "black",
-    dashboardHeader(title ="Obesity in the USA"),
+    dashboardHeader(title      = span("Obesity in the USA", 
+                                      style = "font-weight: bold"),
+                    titleWidth = "300px"),
     dashboardSidebar(
       sidebarMenu(
         menuItem("Obesity in America", tabName            = "obesityHeatTab"),
