@@ -22,7 +22,6 @@ obesityIncomeTab <- list(
             ),
           selected = c("$15,000 - $24,999", "$35,000 - $49,999", "$75,000 or greater")
           ),
-        textOutput("checkIncome"),
         selectInput(inputId = "includeLocation",
                     label   = "Choose States:",
                     choices = list(
