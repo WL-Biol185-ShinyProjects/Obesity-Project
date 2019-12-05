@@ -133,7 +133,8 @@ function(input, output, session) {
         ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
         geom_col(position = "dodge", alpha = 0.7)               + 
         xlab("Income Level")                                    + 
-        ylab("% Obese")
+        ylab("% Obese")                                         +
+        labs(fill = "States")
     }
 )
   
