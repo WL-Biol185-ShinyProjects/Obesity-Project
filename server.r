@@ -17,83 +17,69 @@ source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
 
-usaStates      <- rgdal::readOGR("states.geo.json")
-stateCodes     <- read.csv("states.csv")
-
 function(input, output, session) {
   
+  output$stateResult2 <- renderText(
+    {
+      paste(input$state, collapse = ", ")
+    }
+)
   
-  output$stateResult2 <- renderText({
-    
-    paste(input$state, collapse = ", ")
-    
-  })
+  output$checkYear <- renderText(
+    {
+      yearInput <- paste(input$yearInput, collapse = ", ")
+      paste(yearInput)
+    }
+)
   
-  output$checkYear <- renderText({
-    
-    yearInput <- paste(input$yearInput, collapse = ", ")
-    paste(yearInput)
-  })
-  
-  output$myLineGraph <- renderPlot({
-    obeseTotal                                %>%
-      filter(
-        yearNum     %in% input$yearInput,
-        state       %in% input$state)         %>%     
-      
-      ggplot( aes(yearNum, percentObese, color=state)) + 
-      geom_line()                                      + 
-      xlab("Year")                                     + 
-      ylab("Percent Obese")                
-    
-  })
+  output$myLineGraph <- renderPlot(
+    {
+      obeseTotal                        %>%
+        filter(
+          yearNum %in% input$yearInput,
+          state   %in% input$state)     %>%
+        ggplot(aes(yearNum, percentObese, color = state)) + 
+        geom_line()                                      + 
+        xlab("Year")                                     + 
+        ylab("Percent Obese")
+      }
+)
 
-<<<<<<< HEAD
-      leaflet(usaStates)    %>%
-      setView(-96, 37.8, 4) %>%
-      addTiles()            %>%
-      addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 0.8,
-              fillColor = ~pal(usaState2018Merge$percentObese),
-              label = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese, "%"))) %>%
-              addLegend(pal = pal, values = ~(usaState2018Merge$percentObese), opacity = 0.8)
-    
-  })
-=======
- 
-   output$myHeatMap  <- renderLeaflet({
-   
-      pal <- colorNumeric("YlOrRd", NULL)
-   
-      leaflet(usaStates)       %>%
-        setView(-96, 37.8, 4)  %>%
-        addTiles()             %>%
-        addPolygons(stroke = FALSE, 
-                    smoothFactor     = 0.3,
-                    fillOpacity      = 0.7,
-                    opacity          = 1,
-                    dashArray        = "3",
-                    weight           = 2,
-                    color            = "white",
-                    fillColor        = ~pal(usaState2018Merge$percentObese),
-                    label            = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese)),
-                    highlightOptions = highlightOptions(color = "white",
-                                                        fillOpacity = 2,
+   output$myHeatMap  <- renderLeaflet(
+     {
+       pal <- colorNumeric("YlOrRd", NULL)
+       leaflet(usaStates)       %>%
+         setView(-96, 37.8, 4)  %>%
+         addTiles()             %>%
+         addPolygons(
+                     stroke           = FALSE,
+                     smoothFactor     = 0.3,
+                     fillOpacity      = 0.7,
+                     opacity          = 1,
+                     dashArray        = "3",
+                     weight           = 2,
+                     color            = "white",
+                     fillColor        = ~pal(usaState2018Merge$percentObese),
+                     label            = ~paste0(NAME, ": ", formatC(usaState2018Merge$percentObese)),
+                     highlightOptions = highlightOptions(
+                                                        color        = "white",
+                                                        fillOpacity  = 2,
                                                         bringToFront = TRUE)) %>%
-        addLegend("bottomright",
-                  pal          = pal, 
-                  values       = ~(usaState2018Merge$percentObese), 
-                  opacity      = 0.8, 
-                  title        = "Percent Obese",
-                  labFormat    = labelFormat(suffix = "%"))
-     
-   })
->>>>>>> 44b9b5118373dfb9a65154d8de222d7c51c5d1e1
+         addLegend(
+                   position     = "bottomright",
+                   pal          = pal, 
+                   values       = ~(usaState2018Merge$percentObese), 
+                   opacity      = 0.8, 
+                   title        = "Percent Obese",
+                   labFormat    = labelFormat(suffix = "%"))
+       }
+)
 
- output$stateResult <- renderText({
-    
- paste(input$location, collapse = ", ")
-    
-  })
+ output$stateResult <- renderText(
+   {
+     paste(input$location, collapse = ", ")
+    }
+)
   
  #do we need this if we are not printing what education levels are chosen? 
  output$checkEdu <- renderText({
@@ -101,7 +87,7 @@ function(input, output, session) {
     educationInput <- paste(input$educationInput, collapse = ", ")
     paste(educationInput)
     
-  })
+})
   
   output$barPlotEdu <- renderPlot({
     
@@ -116,13 +102,13 @@ function(input, output, session) {
         ylab("% Obese")                                            +
         labs(fill = "Education Level")
     
-  })
+})
   
   output$stateResultDens <- renderText({
     
     paste(input$locationDens, collapse = ", ")
     
-  })
+})
   
   output$densPlotEdu <- renderPlot({
     
@@ -136,14 +122,14 @@ function(input, output, session) {
       ylab("Density")                                                                +
       labs(fill = "Education Level")
     
-  })
+})
     
   
   output$stateResult3 <- renderText({
     
     paste(input$includeLocation, collapse = ", ")
     
-  })
+})
   
   #do we need this if we are not printing what income levels are chosen?
   output$checkIncome <- renderText({
@@ -151,7 +137,7 @@ function(input, output, session) {
     incomeInput <- paste(input$incomeInput, collapse = ", ")
     paste(incomeInput)
     
-  })
+})
   
   
   output$myIncomeGraph <- renderPlot({
@@ -164,13 +150,13 @@ function(input, output, session) {
       xlab("Income Level")                                    + 
       ylab("% Obese")
     
-  })
+})
   
   output$stateResult3Dens <- renderText({
     
     paste(input$includeLocationDens, collapse = ", ")
     
-  })
+})
   
   output$myIncomeDensity <- renderPlot({
     
@@ -182,7 +168,7 @@ function(input, output, session) {
       ylab("Density")                                                             +
       labs(fill = "Income Level")
     
-  })
+})
   
 }
 

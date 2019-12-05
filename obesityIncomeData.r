@@ -7,7 +7,14 @@ obesityGeneral      <- filter(obesityData, Question == "Percent of adults aged 1
 
 obesityGeneral2018  <- filter(obesityGeneral, YearStart == "2018")
 
-obesityIncome2018   <- obesityGeneral2018 %>% select(YearStart, LocationAbbr, Question, Data_Value, Sample_Size, Income)
+obesityIncome2018   <- obesityGeneral2018 %>% select(
+                                                     YearStart,
+                                                     LocationAbbr,
+                                                     Question,
+                                                     Data_Value,
+                                                     Sample_Size,
+                                                     Income
+                                                     )
 
 
 #removing all data that have NA as value for Income

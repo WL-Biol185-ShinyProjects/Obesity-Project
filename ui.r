@@ -17,18 +17,18 @@ usaState2018Merge      <- read.csv("usaState2018Merge.csv")
 
 #source each tab into the general ui.r
 
-source("obesityHeatMap.r"  )
+source("obesityHeatMap.r")
 source("obesityEducation.r")
-source("obesityIncome.r"  )
+source("obesityIncome.r")
 
 fluidPage(
   dashboardPage(
-    dashboardHeader(title="Obesity in the USA"),
+    dashboardHeader(title = "Obesity in the USA"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Obesity in America"           , tabName = "obesityHeatTab"     ),
+        menuItem("Obesity in America", tabName            = "obesityHeatTab"),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
-        menuItem("Obesity and Income in 2018"   , tabName = "obesityIncomeTab"   )
+        menuItem("Obesity and Income in 2018", tabName    = "obesityIncomeTab")
       )
       ),
     
@@ -38,9 +38,9 @@ fluidPage(
       
          tabItems(
         
-        tabItem(tabName = "obesityHeatTab",      obesityHeatTab),
+        tabItem(tabName = "obesityHeatTab", obesityHeatTab),
         tabItem(tabName = "obesityEducationTab", obesityEducationTab),
-        tabItem(tabName = "obesityIncomeTab",    obesityIncomeTab)
+        tabItem(tabName = "obesityIncomeTab", obesityIncomeTab)
       )
       )
       )
