@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 "","year","location","question","percent","sampleSize","incomeLevel","numberObese","obesePercent"
+=======
+>>>>>>> 50e802e45c3723493d1a659c214db5d1e6aa49fe
 "1","2018","OH","Percent of adults aged 18 years and older who have obesity",36.4,1041,"Less than $15,000",378.924,36.4
 "2","2018","NV","Percent of adults aged 18 years and older who have obesity",41.3,196,"Less than $15,000",80.948,41.3
 "3","2018","SC","Percent of adults aged 18 years and older who have obesity",35,1372,"$50,000 - $74,999",480.2,35
@@ -383,4 +386,8 @@
 "382","2018","NJ","Percent of adults aged 18 years and older who have obesity",16.3,414,"Data not reported",67.482,16.3
 "383","2018","KS","Percent of adults aged 18 years and older who have obesity",37.1,1529,"$50,000 - $74,999",567.259,37.1
 "384","2018","RI","Percent of adults aged 18 years and older who have obesity",23.7,661,"$50,000 - $74,999",156.657,23.7
+<<<<<<< HEAD
 "385","2018","VI","Percent of adults aged 18 years and older who have obesity",NA,NA,"$35,000 - $49,999",NA,NA
+=======
+"385","2018","VI","Percent of adults aged 18 years and older who have obesity",NA,NA,"$35,000 - $49,999",NA,NA
+>>>>>>> 50e802e45c3723493d1a659c214db5d1e6aa49fe

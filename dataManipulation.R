@@ -35,18 +35,7 @@ obeseTotal <- obesityGeneralYearsPercent %>%
   summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
 
-
 obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
 
 
 ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()
-
-
-
-
-
-#View(obesityGeneralYearsPercent)
-#interactive plots, plotOutput
-#brush = brushOpts( id  = "you create this"
-
-                  
