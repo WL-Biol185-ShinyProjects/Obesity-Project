@@ -39,14 +39,14 @@ obesityIncomeTab <- list(
       ),
     mainPanel(plotOutput("myIncomeGraph"))
     ),
-  
+
   fluidRow(box(
                width      = 12,
                background = "black",
                p("The graph below shows...")
                )
            ),
-  
+
   sidebarLayout(
     sidebarPanel(
       checkboxGroupInput(
