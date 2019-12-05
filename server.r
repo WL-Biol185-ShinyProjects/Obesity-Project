@@ -37,7 +37,8 @@ function(input, output, session) {
       obeseTotal                        %>%
         filter(
           yearNum %in% input$yearInput,
-          state   %in% input$state)     %>%
+          state   %in% input$state
+          )                             %>%
         ggplot(aes(yearNum, percentObese, color = state)) + 
         geom_line()                                      + 
         xlab("Year")                                     + 
@@ -64,14 +65,15 @@ function(input, output, session) {
                      highlightOptions = highlightOptions(
                                                         color        = "white",
                                                         fillOpacity  = 2,
-                                                        bringToFront = TRUE)) %>%
+                                                        bringToFront = TRUE)
+                     )          %>%
          addLegend(
-                   position     = "bottomright",
-                   pal          = pal, 
-                   values       = ~(usaState2018Merge$percentObese), 
-                   opacity      = 0.8, 
-                   title        = "Percent Obese",
-                   labFormat    = labelFormat(suffix = "%"))
+                   position  = "bottomright",
+                   pal       = pal, 
+                   values    = ~(usaState2018Merge$percentObese), 
+                   opacity   = 0.8, 
+                   title     = "Percent Obese",
+                   labFormat = labelFormat(suffix = "%"))
        }
 )
 
@@ -81,94 +83,77 @@ function(input, output, session) {
     }
 )
   
- #do we need this if we are not printing what education levels are chosen? 
- output$checkEdu <- renderText({
-    
-    educationInput <- paste(input$educationInput, collapse = ", ")
-    paste(educationInput)
-    
-})
-  
-  output$barPlotEdu <- renderPlot({
-    
-    
-    obesityEducationTotals                 %>%
-      filter(
+ output$barPlotEdu <- renderPlot(
+   {
+     obesityEducationTotals                         %>%
+       filter(
         educationLevel %in% input$educationInput,
-        location       %in% input$location)                                    %>%
+        location       %in% input$location
+        )                                           %>%
         ggplot(aes(location, obesePercent, fill = educationLevel)) +
-        geom_col(position = "dodge", alpha = 0.7)                  +
+        geom_col(position = "dodge",
+                 alpha    = 0.7)                                   +
         xlab("States")                                             +
         ylab("% Obese")                                            +
         labs(fill = "Education Level")
-    
-})
+    }
+)
   
-  output$stateResultDens <- renderText({
-    
-    paste(input$locationDens, collapse = ", ")
-    
-})
+  output$stateResultDens <- renderText(
+    {
+      paste(input$locationDens, collapse = ", ")
+    }
+)
   
-  output$densPlotEdu <- renderPlot({
-    
-    
-    obesityEducationTotals                              %>%
-      filter(
-        educationLevel %in% input$educationInputDens,
-        location       %in% input$locationDens)         %>%
-      ggplot(aes(obesePercent, fill = educationLevel)) + geom_density(alpha = 0.312) +
-      xlab("% Obese")                                                                +
-      ylab("Density")                                                                +
+  output$densPlotEdu <- renderPlot(
+    {
+      obesityEducationTotals                              %>%
+        filter(
+          educationLevel %in% input$educationInputDens,
+          location       %in% input$locationDens)         %>%
+      ggplot(aes(obesePercent, fill = educationLevel)) +
+        geom_density(alpha = 0.312)                    +
+      xlab("% Obese")                                  +
+      ylab("Density")                                  +
       labs(fill = "Education Level")
+    }
+)
     
-})
-    
-  
-  output$stateResult3 <- renderText({
-    
-    paste(input$includeLocation, collapse = ", ")
-    
-})
-  
-  #do we need this if we are not printing what income levels are chosen?
-  output$checkIncome <- renderText({
-    
-    incomeInput <- paste(input$incomeInput, collapse = ", ")
-    paste(incomeInput)
-    
-})
-  
-  
-  output$myIncomeGraph <- renderPlot({
-    
-    obesityIncomeTotals                           %>%
-      filter(incomeLevel %in% input$incomeInput)  %>%
-      filter(location    %in% input$includeLocation)     %>%
-      ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
-      geom_col(position = "dodge", alpha = 0.7)               + 
-      xlab("Income Level")                                    + 
-      ylab("% Obese")
-    
-})
-  
-  output$stateResult3Dens <- renderText({
-    
-    paste(input$includeLocationDens, collapse = ", ")
-    
-})
-  
-  output$myIncomeDensity <- renderPlot({
-    
-    obesityIncomeTotals                               %>%
-      filter(incomeLevel %in% input$incomeInputDens)  %>%
-      filter(location %in% input$includeLocationDens) %>%
-      ggplot(aes(obesePercent, fill = incomeLevel)) + geom_density(alpha = 0.312) +
-      xlab("% Obese")                                                             +
-      ylab("Density")                                                             +
-      labs(fill = "Income Level")
-    
-})
-  
-}
+  output$stateResult3 <- renderText(
+    {
+      paste(input$includeLocation, collapse = ", ")
+    }
+)
 
+  output$myIncomeGraph <- renderPlot(
+    {
+      obesityIncomeTotals                                  %>%
+        filter(incomeLevel %in% input$incomeInput)         %>%
+        filter(location    %in% input$includeLocation)     %>%
+        ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
+        geom_col(position = "dodge", alpha = 0.7)               + 
+        xlab("Income Level")                                    + 
+        ylab("% Obese")
+    }
+)
+  
+  output$stateResult3Dens <- renderText(
+    {
+      paste(input$includeLocationDens, collapse = ", ")
+    }
+)
+  
+  output$myIncomeDensity <- renderPlot(
+    {
+      obesityIncomeTotals                                  %>%
+        filter(incomeLevel %in% input$incomeInputDens)     %>%
+        filter(location    %in% input$includeLocationDens) %>%
+        ggplot(aes(obesePercent, fill = incomeLevel))                               +
+        geom_density(alpha = 0.312)                                                 +
+        xlab("% Obese")                                                             +
+        ylab("Density")                                                             +
+        labs(fill = "Income Level")
+    }
+  )
+  
+  }
