@@ -39,9 +39,9 @@ function(input, output, session) {
     obeseTotal                                %>%
       filter(
         yearNum     %in% input$yearInput,
-        state       %in% input$state)         %>%     
+        State       %in% input$State)         %>%     
       
-      ggplot( aes(yearNum, percentObese, color=state)) + 
+      ggplot( aes(yearNum, percentObese, color=State)) + 
       geom_line()                                      + 
       xlab("Year")                                     + 
       ylab("Percent Obese")                
