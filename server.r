@@ -83,14 +83,7 @@ function(input, output, session) {
  paste(input$location, collapse = ", ")
     
   })
-  
- #do we need this if we are not printing what education levels are chosen? 
- output$checkEdu <- renderText({
-    
-    educationInput <- paste(input$educationInput, collapse = ", ")
-    paste(educationInput)
-    
-  })
+
   
   output$barPlotEdu <- renderPlot({
     
@@ -131,14 +124,6 @@ function(input, output, session) {
   output$stateResult3 <- renderText({
     
     paste(input$includeLocation, collapse = ", ")
-    
-  })
-  
-  #do we need this if we are not printing what income levels are chosen?
-  output$checkIncome <- renderText({
-    
-    incomeInput <- paste(input$incomeInput, collapse = ", ")
-    paste(incomeInput)
     
   })
   
