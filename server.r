@@ -91,11 +91,12 @@ function(input, output, session) {
         location       %in% input$location
         )                                           %>%
         ggplot(aes(location, obesePercent, fill = educationLevel)) +
+        scale_fill_manual(values = c("#FFCC33", "#FF9933", "#FF3333", "#990000")) +
         geom_col(position = "dodge",
-                 alpha    = 0.7)                                   +
+                 alpha    = 0.9)                                   +
         xlab("States")                                             +
         ylab("% Obese")                                            +
-        labs(fill = "Education Level")
+        labs(fill = "Education Level") + scale_color_gradient("Blue")
     }
 )
   
@@ -112,7 +113,8 @@ function(input, output, session) {
           educationLevel %in% input$educationInputDens,
           location       %in% input$locationDens)         %>%
       ggplot(aes(obesePercent, fill = educationLevel)) +
-        geom_density(alpha = 0.312)                    +
+        scale_fill_manual(values = c("#99CCFF", "#FF9933", "#FF3333", "#FFFFCC")) +
+        geom_density(alpha = 0.6)                    +
       xlab("% Obese")                                  +
       ylab("Density")                                  +
       labs(fill = "Education Level")
