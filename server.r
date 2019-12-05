@@ -13,6 +13,7 @@ usaStates              <- rgdal::readOGR("states.geo.json")
 
 #source each individual R script for each tab 
 
+source("introductionPage.r")
 source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
