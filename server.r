@@ -13,6 +13,7 @@ usaStates              <- rgdal::readOGR("states.geo.json")
 
 #source each individual R script for each tab 
 
+source("introductionPage.r")
 source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
@@ -42,7 +43,7 @@ function(input, output, session) {
         ggplot(aes(yearNum, percentObese, color = State)) + 
         geom_line()                                      + 
         xlab("Year")                                     + 
-        ylab("Percent Obese")
+        ylab("% Obese")
       }
 )
 
@@ -135,7 +136,8 @@ function(input, output, session) {
         ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
         geom_col(position = "dodge", alpha = 0.7)               + 
         xlab("Income Level")                                    + 
-        ylab("% Obese")
+        ylab("% Obese")                                         +
+        labs(fill = "States")
     }
 )
   
