@@ -112,11 +112,11 @@ function(input, output, session) {
         filter(
           educationLevel %in% input$educationInputDens,
           location       %in% input$locationDens)         %>%
-      ggplot(aes(obesePercent, fill = educationLevel)) +
+      ggplot(aes(obesePercent, fill = educationLevel))                            +
         scale_fill_manual(values = c("#99CCFF", "#FF9933", "#FF3333", "#FFFFCC")) +
-        geom_density(alpha = 0.6)                    +
-      xlab("% Obese")                                  +
-      ylab("Density")                                  +
+        geom_density(alpha = 0.6)                                                 +
+      xlab("% Obese")                                                             +
+      ylab("Density")                                                             +
       labs(fill = "Education Level")
     }
 )
