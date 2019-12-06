@@ -91,9 +91,10 @@ function(input, output, session) {
         educationLevel %in% input$educationInput,
         location       %in% input$location
         )                                           %>%
-        ggplot(aes(location, obesePercent, fill = educationLevel)) +
+        ggplot(aes(location, obesePercent, fill = educationLevel))                +
+        scale_fill_manual(values = c("#FFCC33", "#FF9933", "#FF3333", "#990000")) +
         geom_col(position = "dodge",
-                 alpha    = 0.7)                                   +
+                 alpha    = 0.9)                                   +
         xlab("States")                                             +
         ylab("% Obese")                                            +
         labs(fill = "Education Level")
@@ -112,10 +113,11 @@ function(input, output, session) {
         filter(
           educationLevel %in% input$educationInputDens,
           location       %in% input$locationDens)         %>%
-      ggplot(aes(obesePercent, fill = educationLevel)) +
-        geom_density(alpha = 0.312)                    +
-      xlab("% Obese")                                  +
-      ylab("Density")                                  +
+      ggplot(aes(obesePercent, fill = educationLevel))                            +
+        scale_fill_manual(values = c("#99CCFF", "#FF9933", "#FF3333", "#FFFFCC")) +
+        geom_density(alpha = 0.6)                                                 +
+      xlab("% Obese")                                                             +
+      ylab("Density")                                                             +
       labs(fill = "Education Level")
     }
 )
@@ -131,11 +133,12 @@ function(input, output, session) {
       obesityIncomeTotals                                  %>%
         filter(incomeLevel %in% input$incomeInput)         %>%
         filter(location    %in% input$includeLocation)     %>%
-        ggplot(aes(incomeLevel, obesePercent, fill = location)) + 
-        geom_col(position = "dodge", alpha = 0.7)               + 
-        xlab("Income Level")                                    + 
-        ylab("% Obese")                                         +
-        labs(fill = "States")
+        ggplot(aes(location, obesePercent, fill = incomeLevel))                                         +
+        scale_fill_manual(values = c("#FFCC33", "#FF9933", "#FF3333", "#99CCFF", "#6666CC", "#990000")) +
+        geom_col(position = "dodge", alpha = 0.9)                                                       + 
+        xlab("States")                                                                                  + 
+        ylab("% Obese")                                                                                 +
+        labs(fill = "Income Level")
     }
 )
   
@@ -150,10 +153,11 @@ function(input, output, session) {
       obesityIncomeTotals                                  %>%
         filter(incomeLevel %in% input$incomeInputDens)     %>%
         filter(location    %in% input$includeLocationDens) %>%
-        ggplot(aes(obesePercent, fill = incomeLevel))                               +
-        geom_density(alpha = 0.312)                                                 +
-        xlab("% Obese")                                                             +
-        ylab("Density")                                                             +
+        ggplot(aes(obesePercent, fill = incomeLevel))                                                   +
+        scale_fill_manual(values = c("#FFCC33", "#FF9933", "#FF3333", "#99CCFF", "#6666CC", "#990000")) +
+        geom_density(alpha = 0.6)                                                                       +
+        xlab("% Obese")                                                                                 +
+        ylab("Density")                                                                                 +
         labs(fill = "Income Level")
     }
   )
