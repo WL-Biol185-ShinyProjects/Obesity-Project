@@ -154,7 +154,7 @@ function(input, output, session) {
         filter(incomeLevel %in% input$incomeInputDens)     %>%
         filter(location    %in% input$includeLocationDens) %>%
         ggplot(aes(obesePercent, fill = incomeLevel))                                                   +
-        scale_fill_manual(values = c("#FFCC33", "#FF9933", "#FF3333", "#99CCFF", "#6666CC", "#990000")) +
+        scale_fill_manual(values = c("#FFCC33", "#FF9933", "#FF3333", "#99CCFF", "#6666CC", "#FFFFCC")) +
         geom_density(alpha = 0.6)                                                                       +
         xlab("% Obese")                                                                                 +
         ylab("Density")                                                                                 +
