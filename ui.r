@@ -28,7 +28,7 @@ fluidPage(
                     titleWidth = "300px"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Background",                    tabName = "introductionTab"),
+        menuItem("Introduction",                  tabName = "introductionTab"),
         menuItem("Obesity in America",            tabName = "obesityHeatTab"),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
         menuItem("Obesity and Income in 2018",    tabName = "obesityIncomeTab")
