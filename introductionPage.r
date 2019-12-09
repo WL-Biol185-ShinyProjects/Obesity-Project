@@ -6,14 +6,14 @@ introductionTab <- list(
   h2(strong("The impacts of the obesity epidemic touch on all aspects of life, including health, productivity, and economics. In many cases, obesity limits an individual’s mobility to the point of disability, drastically lowering their health related quality of life (2). In 2014, the cost of increased healthcare and lost productivity factored into an estimated global economic burden of 2 trillion dollars (5).")),
   br(),
   
-  img(src = "obesity image.png", height = 200, width = 200),
+  img(src = "obesity image.jpg", height = 400, width = 400, align = "right"),
   h3(strong("Obesity data compiled from the CDC (1) was used to visualize the relationships between obesity and education & income levels across the United States. Below outlines the specific relationships we found:")),
   
   h3("Obesity rates are lower in individuals who are college graduates than those who graduated from high school, but did not continue on to college (4)."),
   br(),
   h3("Low income individuals are also vulnerable to developing obesity, and orient towards prepackaged meals due to restricted time and inability to properly meal prep. Processed foods are most often purchased over healthier options due to a lack of time and resources (3)."),
   br(),
-  h3("Education and financial success seem to be factors associated with weight gain and obesity."),
+  h3("Education level and financial success seem to be factors inversely correlated with weight gain and obesity."),
   br(),
   br(),
   
@@ -34,6 +34,5 @@ introductionTab <- list(
 
    a("5. Tremmel, M., Gerdtham, U., Nilsson, P., Saha, S., & Tremmel, M. (2017). Economic Burden of Obesity: A Systematic Literature Review. International Journal of Environmental Research and Public Health, 14(4).", href = "https://doi.org/10.3390/ijerph14040435"),
   br()
-  
   
 )
