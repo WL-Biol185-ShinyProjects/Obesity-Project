@@ -31,7 +31,8 @@ fluidPage(
         menuItem("Introduction",                  tabName = "introductionTab"),
         menuItem("Obesity in America",            tabName = "obesityHeatTab"),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
-        menuItem("Obesity and Income in 2018",    tabName = "obesityIncomeTab")
+        menuItem("Obesity and Income in 2018",    tabName = "obesityIncomeTab"),
+        menuItem("About",                         tabName = "aboutTab")
         )
       ),
 
@@ -41,7 +42,8 @@ dashboardBody(
     tabItem(tabName = "introductionTab", introductionTab),
     tabItem(tabName = "obesityHeatTab", obesityHeatTab),
     tabItem(tabName = "obesityEducationTab", obesityEducationTab),
-    tabItem(tabName = "obesityIncomeTab", obesityIncomeTab)
+    tabItem(tabName = "obesityIncomeTab", obesityIncomeTab),
+    tabItem(tabName = "aboutTab",         aboutTab)
     )
   )
 )
