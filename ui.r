@@ -5,6 +5,7 @@ library(ggplot2)
 library(rgdal)
 library(dplyr)
 library(tidyverse)
+library(htmltools)
 
 #call csv data files
 obesityIncomeTotals    <- read.csv("obesityIncomeTotals.csv")
@@ -25,7 +26,7 @@ fluidPage(
                     titleWidth = "300px"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Introduction", tabName = "introductionTab"),
+        menuItem("Introduction",                  tabName = "introductionTab"),
         menuItem("Obesity in America",            tabName = "obesityHeatTab"),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
         menuItem("Obesity and Income in 2018",    tabName = "obesityIncomeTab")
