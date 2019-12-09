@@ -4,7 +4,7 @@ obesityIncomeTab <- list(
   fluidRow(box(
                width      = 12,
                background = "navy",
-               p("The bar graph below depicts the correlation between average state income and percent of obesity across various state populations.")
+               p("The bar graph below depicts the correlation between average state income and percent of obesity among various states.  Choose states to compare obesity percentages within the selected income brackets.")
                )
            ),
   sidebarLayout(
