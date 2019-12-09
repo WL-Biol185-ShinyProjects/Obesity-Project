@@ -1,4 +1,10 @@
 introductionTab <- list(
+  headerPanel("Background of Obesity in the United States"),
+  br(),
   
-  titlePanel("Welcome to our obesity Project")
-)
+  p(),
+  br()
+  
+  )
+  
+  
