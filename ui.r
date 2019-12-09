@@ -27,7 +27,7 @@ fluidPage(
                     titleWidth = "300px"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Background",                    tabName = "introductionTab"),
+        menuItem("Background",                    tabName = "backgroundTab"),
         menuItem("Obesity in America",            tabName = "obesityHeatTab"),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
         menuItem("Obesity and Income in 2018",    tabName = "obesityIncomeTab")
@@ -37,7 +37,7 @@ fluidPage(
 #creating tabs in the app
 dashboardBody(
   tabItems(
-    tabItem(tabname = "introductionTab", introductionTab),
+    tabItem(tabname = "backgroundTab", backgroundTab),
     tabItem(tabName = "obesityHeatTab", obesityHeatTab),
     tabItem(tabName = "obesityEducationTab", obesityEducationTab),
     tabItem(tabName = "obesityIncomeTab", obesityIncomeTab)
