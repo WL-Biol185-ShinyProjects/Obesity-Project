@@ -7,6 +7,8 @@ library(dplyr)
 library(tidyverse)
 library(htmltools)
 
+shiny::tags
+
 #call csv data files
 obesityIncomeTotals    <- read.csv("obesityIncomeTotals.csv")
 obesityEducationTotals <- read.csv("obesityEducationTotals.csv")
