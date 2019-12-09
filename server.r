@@ -17,6 +17,7 @@ source("introductionPage.r")
 source("obesityHeatMap.r")
 source("obesityEducation.r")
 source("obesityIncome.r")
+source("aboutTab.r")
 
 function(input, output, session) {
   
