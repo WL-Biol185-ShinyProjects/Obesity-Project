@@ -25,28 +25,26 @@ source("aboutTab.r")
 fluidPage(
   dashboardPage(skin = "black",
     dashboardHeader(title      = span("Obesity in the USA", 
-                                      style = "font-weight: bold"),
+                    style      = "font-weight: bold"),
                     titleWidth = "300px"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Background",                    tabName = "backgroundTab"),
-        menuItem("Introduction",                  tabName = "introductionTab"),
-        menuItem("Obesity in America",            tabName = "obesityHeatTab"),
+        menuItem("Introduction", tabName                  = "introductionTab"),
+        menuItem("Obesity in America", tabName            = "obesityHeatTab"),
         menuItem("Obesity and Education in 2018", tabName = "obesityEducationTab"),
-        menuItem("Obesity and Income in 2018",    tabName = "obesityIncomeTab"),
-        menuItem("About",                         tabName = "aboutTab")
+        menuItem("Obesity and Income in 2018", tabName    = "obesityIncomeTab"),
+        menuItem("About", tabName                         = "aboutTab")
         )
       ),
 
 #creating tabs in the app
 dashboardBody(
   tabItems(
-    tabItem(tabname = "backgroundTab", backgroundTab),
     tabItem(tabName = "introductionTab", introductionTab),
     tabItem(tabName = "obesityHeatTab", obesityHeatTab),
     tabItem(tabName = "obesityEducationTab", obesityEducationTab),
     tabItem(tabName = "obesityIncomeTab", obesityIncomeTab),
-    tabItem(tabName = "aboutTab",         aboutTab)
+    tabItem(tabName = "aboutTab", aboutTab)
     )
   )
 )

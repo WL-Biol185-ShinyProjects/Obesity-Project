@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-backgroundTab <- list(
-  titlePanel("Income & Obesity in the United States"),
-  fluidRow(box(
-    width      = 12,
-    background = "navy",
-    p("The bar graph below depicts the correlation between average state income and percent of obesity across various state populations.")
-  )
-  )
-=======
 introductionTab <- list(
 
   h1(strong("Welcome to our obesity project"), style = "color: #990000", align = "center"),
@@ -18,17 +8,18 @@ introductionTab <- list(
   
   img(src = "obesity image.jpg", height = 400, width = 400, align = "right"),
   h3(strong("Obesity data compiled from the CDC (1) was used to visualize the relationships between obesity and education & income levels across the United States. Below outlines the specific relationships we found:")),
-  
   h3("Obesity rates are lower in individuals who are college graduates than those who graduated from high school, but did not continue on to college (4)."),
   br(),
+  
   h3("Low income individuals are also vulnerable to developing obesity, and orient towards prepackaged meals due to restricted time and inability to properly meal prep. Processed foods are most often purchased over healthier options due to a lack of time and resources (3)."),
   br(),
+  
   h3("Education level and financial success seem to be factors inversely correlated with weight gain and obesity."),
   br(),
+  
   br(),
   
   #create links to references
-  
   h2("References"),
     a("1. Centers for Disease Control and Prevention. (2019, October 10). Chronic Data. Retrieved from Nutrition, Physical Activity, and Obesity - Behavioral Risk Factor Surveillance System", href ="https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7"),
   br(),
@@ -45,6 +36,4 @@ introductionTab <- list(
    a("5. Tremmel, M., Gerdtham, U., Nilsson, P., Saha, S., & Tremmel, M. (2017). Economic Burden of Obesity: A Systematic Literature Review. International Journal of Environmental Research and Public Health, 14(4).", href = "https://doi.org/10.3390/ijerph14040435"),
   br()
   
->>>>>>> 507472eaf32b91b52e5f491872f11c3b86035fda
-)
-
+  )

@@ -1,13 +1,6 @@
-View(obesityData)
-library(tidyverse)
-library(dplyr)
-library(ggplot2)
-
-obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
+obesityGeneral      <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
 obesityGeneralYears <- filter(obesityGeneral, YearStart == c("2018"))
-
-View(obesityGeneral)
 
 #filter table for 5 columns that we want
 obesityGeneralYears <- obesityGeneral %>%
@@ -21,21 +14,16 @@ colnames (obesityGeneralYears) [4]  <- "percent"
 colnames (obesityGeneralYears) [5]  <- "sampleSize"
 
 #taking of N/A from percent column
-
 obesityGeneralYearsPercent <- obesityGeneralYears %>% 
   filter(percent != "N/A")
 
-obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state) #made state a factor
-obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
+#made state a factor
+obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state)
+obesityGeneralYearsPercent$year  <- as.factor(obesityGeneralYearsPercent$year)
 
-#create bar graph of increase in obesity 
-
+#create obese total table 
 obeseTotal <- obesityGeneralYearsPercent %>%
-  group_by(state, year) %>%
+  group_by(state, year)                  %>%
   summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
-
 obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
-
-
-ggplot(obeseTotal, aes(yearNum, percentObese, color=state)) + geom_line()

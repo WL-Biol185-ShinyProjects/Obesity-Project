@@ -1,23 +1,14 @@
-#data manipulation for income
-obesityGeneral     <- filter(
-                             obesityData,
-                             Question == "Percent of adults aged 18 years and older who have obesity"
-                             )
+obesityGeneral     <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
-obesityGeneral2018 <- filter(
-                             obesityGeneral,
-                             YearStart == "2018"
-                             )
+obesityGeneral2018 <- filter(obesityGeneral, YearStart == "2018")
 
 obesityIncome2018  <- obesityGeneral2018 %>% 
-  select(
-         YearStart,
+  select(YearStart,
          LocationAbbr,
          Question,
          Data_Value,
          Sample_Size,
-         Income
-         )
+         Income)
 
 #removing all data that have NA as value for Income
 obesityIncome <- obesityIncome2018 %>% 
@@ -36,7 +27,7 @@ obesityIncomeData <- obesityIncome     %>%
   as_tibble()                          %>% 
   mutate(
     numberObese = sampleSize*(percent/100)
-        )
+    )
 
 #converting variables into factors
 obesityIncomeData$location    <- as.factor(obesityIncomeTotals$location)
@@ -46,8 +37,6 @@ obesityIncomeData$incomeLevel <- as.factor(obesityIncomeTotals$incomeLevel)
 #calculations
 obesityIncomeTotals <- obesityIncomeData                       %>%
   as_tibble()                                                  %>% 
-  mutate(
-    obesePercent = (numberObese/sampleSize)*100
-        )
+  mutate(obesePercent = (numberObese/sampleSize)*100)
 
 write.csv(obesityIncomeTotals, "obesityIncomeTotals.csv")

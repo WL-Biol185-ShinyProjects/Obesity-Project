@@ -1,4 +1,4 @@
-obesityGeneral <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
+obesityGeneral      <- filter(obesityData, Question == "Percent of adults aged 18 years and older who have obesity")
 
 obesityGeneralYears <- filter(obesityGeneral, YearStart == c("2018"))
 
@@ -12,22 +12,23 @@ colnames (obesityGeneralYears) [3]  <- "question"
 colnames (obesityGeneralYears) [4]  <- "percent" 
 colnames (obesityGeneralYears) [5]  <- "sampleSize"
 
-obesityGeneralYearsPercent <- obesityGeneralYears %>% #taking of N/A from percent column 
+#taking of N/A from percent column
+obesityGeneralYearsPercent <- obesityGeneralYears %>% 
   filter(percent != "N/A")
 
-obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state) #made state a factor
-obesityGeneralYearsPercent$year <- as.factor(obesityGeneralYearsPercent$year)
+#made state a factor
+obesityGeneralYearsPercent$state <- as.factor(obesityGeneralYearsPercent$state)
+obesityGeneralYearsPercent$year  <- as.factor(obesityGeneralYearsPercent$year)
 
 #create bar graph of increase in obesity 
-
 obeseTotal <- obesityGeneralYearsPercent %>%
-  group_by(state, year) %>%
+  group_by(state, year)                  %>%
   summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
 obeseTotal$yearNum <- as.numeric(as.character(obeseTotal$year))
 
 obeseTotal <- obesityGeneralYearsPercent %>%
-  group_by(state, year) %>%
+  group_by(state, year)                  %>%
   summarize(percentObese = sum(percent*sampleSize)/(sum(sampleSize)))
 
 write.csv(obeseTotal, "obeseTotal.csv")

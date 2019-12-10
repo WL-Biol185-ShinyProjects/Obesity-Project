@@ -14,6 +14,7 @@ aboutTab <- list(
   
   h3("Kyle, Katherine, and Laney", align = "center"),
   br(),
+  
   img(src = "W&amp;L.png", style = "display: block; margin-left: auto; margin-right: auto;")
   
-)
+  )

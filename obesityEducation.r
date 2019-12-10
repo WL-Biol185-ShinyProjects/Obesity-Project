@@ -2,12 +2,16 @@ obesityEducationTab <- list(
   
   titlePanel("Education & Obesity in the United States"),
   
-  fluidRow(box(width = 12, background = "navy", p("The bar graph below shows distribution of education level among obese individuals. Compare obesity percentages by state and education level:"))),
+  fluidRow(box(width      = 12,
+               background = "navy",
+               p("The bar graph below shows distribution of education level among obese individuals. Compare obesity percentages by state and education level."))
+           ),
 
    sidebarLayout(
     sidebarPanel(
     checkboxGroupInput(
-      "educationInput", "Choose Education Level:",
+      "educationInput",
+      "Choose Education Level:",
       choices = list(
         "College Graduate"     = "College graduate",
         "Highschool Graduate"  = "High school graduate",
@@ -16,32 +20,35 @@ obesityEducationTab <- list(
       ),
       selected = c("College graduate", "High school graduate", "Less than high school")
     ),
-    
-    selectInput(inputId = "location",
-                label = "Choose States:",
-                choices = list(
-                  "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
-                  "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
-                  "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
-                  "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
-                  "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
+    selectInput(
+      inputId = "location",
+      label   = "Choose States:",
+      choices = list(
+        "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
+        "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
+        "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
+        "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
+        "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                 ),
-                selected = c("NY", "VA"),
-                selectize = TRUE,
-                multiple = TRUE
-    ),
+      selected  = c("NY", "VA"),
+      selectize = TRUE,
+      multiple  = TRUE
+      ),
     textOutput("stateResult")
     ),
-    mainPanel(plotOutput("barPlotEdu")
-    )
-  ),
+    mainPanel(plotOutput("barPlotEdu"))
+    ),
 
-  fluidRow(box(width = 12, background = "navy", p("The density plot below shows distribution of education level among obese individuals. Compare obesity percentages by state and education level:"))),
+  fluidRow(box(width      = 12,
+               background = "navy",
+               p("The density plot below shows distribution of education level among obese individuals."))
+           ),
    
   sidebarLayout(
     sidebarPanel(
       checkboxGroupInput(
-        "educationInputDens", "Choose Education Level:",
+        "educationInputDens",
+        "Choose Education Level:",
         choices = list(
           "College Graduate"     = "College graduate",
           "Highschool Graduate"  = "High school graduate",
@@ -50,23 +57,22 @@ obesityEducationTab <- list(
         ),
         selected = c("College graduate", "High school graduate", "Less than high school")
       ),
-      
-      selectInput(inputId = "locationDens",
-                  label = "Choose States:",
-                  choices = list(
-                    "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
-                    "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
-                    "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
-                    "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
-                    "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
-                  ),
-                  selected = c("NY", "CA", "VA", "DC"),
-                  selectize = TRUE,
-                  multiple = TRUE
-      ),
+      selectInput(
+        inputId = "locationDens",
+        label   = "Choose States:",
+        choices = list(
+          "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
+          "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
+          "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ",
+          "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD",
+          "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
+          ),
+        selected  = c("NY", "CA", "VA", "DC"),
+        selectize = TRUE,
+        multiple  = TRUE
+        ),
       textOutput("stateResultDens")
-    ),
-    mainPanel(plotOutput("densPlotEdu")
+      ),
+    mainPanel(plotOutput("densPlotEdu"))
     )
   )
-)
