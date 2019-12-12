@@ -63,7 +63,7 @@ obesityIncomeTab <- list(
                      "$75,000 or greater")
         ),
       selectInput(inputId = "includeLocationDens",
-                  label = "Choose States:",
+                  label   = "Choose States:",
                   choices = list(
                     "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
                     "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
@@ -72,8 +72,8 @@ obesityIncomeTab <- list(
                     "TN", "TX", "US", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"
                   ),
                   selectize = TRUE,
-                  multiple = TRUE,
-                  selected = c("DC", "WA", "MS")
+                  multiple  = TRUE,
+                  selected  = c("DC", "WA", "MS")
       ),
       textOutput("stateResult3Dens")
     ),
